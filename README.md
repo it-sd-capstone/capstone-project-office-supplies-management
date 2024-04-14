@@ -10,4 +10,4 @@
 4.  Run the project once, which will use a stub function to instantiate the database.
 
 ### Additionally...
-The tables in the database's records can be updated/added within Visual Studio, but any changes to the database's design (such as altering relationships, changing primary/foreign keys, or changing column names) are more easily done in SSMS.
+The database's records can be updated/added within Visual Studio, but any changes to the database's design (such as altering relationships, changing primary/foreign keys, changing column names, or adding tables) are more easily done in SSMS.
