@@ -1,6 +1,6 @@
 # Capstone Project: Office Supplies Management
 
-## Before cloning/forking...
+### Before cloning/forking...
 1.  Download [SQL Server Management Studio (SSMS) 20.1](https://aka.ms/ssmsfullsetup) (this link downloads automatically).
 
 2.  Download [Visual Studio 2022](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&passive=false&cid=2030) (this link downloads automatically).
