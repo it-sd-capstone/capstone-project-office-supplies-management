@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OfficeSuppliesManagement")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a1fb4f6e47cefad5ec457565e1c01e148068ad7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+697758793deeca596ef8dff349fd190738072cb2")]
 [assembly: System.Reflection.AssemblyProductAttribute("OfficeSuppliesManagement")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OfficeSuppliesManagement")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

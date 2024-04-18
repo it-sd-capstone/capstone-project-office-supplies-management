@@ -1,26 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT Developer Capstone\\Module3\\OfficeSuppliesManagement\\",
+  "WorkspaceRootPath": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\Module3\\OfficeSuppliesManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|c:\\users\\gabes\\onedrive - chippewa valley technical college\\it developer capstone\\module3\\officesuppliesmanagement\\officesuppliesmanagement\\dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|c:\\users\\gabes\\onedrive - chippewa valley technical college\\it-developercapstone\\module3\\officesuppliesmanagement\\officesuppliesmanagement\\dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|solutionrelative:officesuppliesmanagement\\dao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT Developer Capstone\\Module3\\OfficeSuppliesManagement\\officesuppliesmanagement\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|solutionrelative:officesuppliesmanagement\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT Developer Capstone\\Module3\\OfficeSuppliesManagement\\officesuppliesmanagement\\officesuppliesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\Module3\\OfficeSuppliesManagement\\officesuppliesmanagement\\officesuppliesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|solutionrelative:officesuppliesmanagement\\officesuppliesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT Developer Capstone\\Module3\\OfficeSuppliesManagement\\officesuppliesmanagement\\officesuppliesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|solutionrelative:officesuppliesmanagement\\officesuppliesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\Module3\\OfficeSuppliesManagement\\officesuppliesmanagement\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|solutionrelative:officesuppliesmanagement\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT Developer Capstone\\Module3\\OfficeSuppliesManagement\\officesuppliesmanagement\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\Module3\\OfficeSuppliesManagement\\officesuppliesmanagement\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|solutionrelative:officesuppliesmanagement\\supplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\Module3\\OfficeSuppliesManagement\\officesuppliesmanagement\\officesuppliesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|solutionrelative:officesuppliesmanagement\\officesuppliesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,11 +38,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "OfficeSuppliesManagement.cs",
-              "DocumentMoniker": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT Developer Capstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\OfficeSuppliesManagement.cs",
+              "DocumentMoniker": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\OfficeSuppliesManagement.cs",
               "RelativeDocumentMoniker": "OfficeSuppliesManagement\\OfficeSuppliesManagement.cs",
-              "ToolTip": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT Developer Capstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\OfficeSuppliesManagement.cs",
+              "ToolTip": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\OfficeSuppliesManagement.cs",
               "RelativeToolTip": "OfficeSuppliesManagement\\OfficeSuppliesManagement.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -52,9 +52,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "DAO.cs",
-              "DocumentMoniker": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT Developer Capstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\DAO.cs",
+              "DocumentMoniker": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\DAO.cs",
               "RelativeDocumentMoniker": "OfficeSuppliesManagement\\DAO.cs",
-              "ToolTip": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT Developer Capstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\DAO.cs",
+              "ToolTip": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\DAO.cs",
               "RelativeToolTip": "OfficeSuppliesManagement\\DAO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -63,11 +63,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT Developer Capstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\Product.cs",
+              "DocumentMoniker": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\Product.cs",
               "RelativeDocumentMoniker": "OfficeSuppliesManagement\\Product.cs",
-              "ToolTip": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT Developer Capstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\Product.cs",
+              "ToolTip": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\Product.cs",
               "RelativeToolTip": "OfficeSuppliesManagement\\Product.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -75,11 +75,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Supplier.cs",
-              "DocumentMoniker": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT Developer Capstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\Supplier.cs",
+              "DocumentMoniker": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\Supplier.cs",
               "RelativeDocumentMoniker": "OfficeSuppliesManagement\\Supplier.cs",
-              "ToolTip": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT Developer Capstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\Supplier.cs",
+              "ToolTip": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\Supplier.cs",
               "RelativeToolTip": "OfficeSuppliesManagement\\Supplier.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -87,12 +87,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "OfficeSuppliesManagement.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT Developer Capstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\OfficeSuppliesManagement.cs",
+              "DocumentMoniker": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\OfficeSuppliesManagement.cs",
               "RelativeDocumentMoniker": "OfficeSuppliesManagement\\OfficeSuppliesManagement.cs",
               "ToolTip": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT Developer Capstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\OfficeSuppliesManagement.cs [Design]",
-              "RelativeToolTip": "OfficeSuppliesManagement\\OfficeSuppliesManagement.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\IT Developer Capstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\OfficeSuppliesManagement.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-14T16:14:36.903Z"
             }

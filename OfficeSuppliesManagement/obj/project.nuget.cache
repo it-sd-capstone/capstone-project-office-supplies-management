@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zjO7zfZK2Q4vy6baZAgXDI6KB3dM025SIGLWY2BsgyZZwQHKn0jzPYCS6bw4uD2CTnwAJJPQnou55jNrKcmh1A==",
+  "dgSpecHash": "tZVroZpcY/L+7wmo/Ax7jE8HDj+Dt4sbsaewrvtVA735gooME1vuKD+Q7aiqXQhbQZ4blfzLiwdAwH3o3aorqw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT Developer Capstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj",
+  "projectFilePath": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabes\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\gabes\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

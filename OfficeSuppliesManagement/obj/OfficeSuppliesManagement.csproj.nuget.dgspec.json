@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT Developer Capstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj": {}
+    "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT Developer Capstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj": {
+    "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT Developer Capstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj",
+        "projectUniqueName": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj",
         "projectName": "OfficeSuppliesManagement",
-        "projectPath": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT Developer Capstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj",
+        "projectPath": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj",
         "packagesPath": "C:\\Users\\gabes\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT Developer Capstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\obj\\",
+        "outputPath": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\Module3\\OfficeSuppliesManagement\\OfficeSuppliesManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
