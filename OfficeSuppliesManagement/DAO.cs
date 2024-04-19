@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,44 +9,36 @@ using System.Threading.Tasks;
 namespace OfficeSuppliesManagement
 {
     internal class DAO
-    {
-        string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=OfficeSupplies;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
-    
+    { 
+
         // **********************************************************
         // *** Function to test the connection with the database. ***
         // **********************************************************
         //
-        public List<Product> getAllProducts()
+        public List<Product> GetAllProducts()
         {
             List<Product> products = new List<Product>();
 
             // Connect to the database
-            SqlConnection connection = new SqlConnection(connectionString);
-            connection.Open();
-
-            // Create test command
-            SqlCommand command = new SqlCommand("SELECT * FROM dbo.Products", connection);
-
-            using (SqlDataReader reader = command.ExecuteReader())
+            string connStr = "server=localhost;user=root;port=3306;password=mysql";
+            MySqlConnection conn = new MySqlConnection(connStr);
+            try
             {
-                while (reader.Read())
-                {
-                    Product p = new Product
-                    {
-                        ID = reader.GetInt32(0),
-                        Name = reader.GetString(1),
-                        Description = reader.IsDBNull(2) ? null : reader.GetString(2),
-                        Price = (float) reader.GetDecimal(3),
-                        Quantity = reader.GetInt16(4),
-                        CategoryID = reader.GetInt16(5)
-                    };
+                Console.WriteLine("Connecting to MySQL...");
+                conn.Open();
 
-                    // Append each product to the product list.
-                    products.Add(p);
-                }
+                string sql = "CREATE DATABASE IF NOT EXISTS OfficeSupplies;";
+
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.ExecuteNonQuery();
+                Console.WriteLine("Database created successfully");
             }
-            connection.Close();
-
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            conn.Close();
+            Console.WriteLine("Done.");
             return products;
         }
     }

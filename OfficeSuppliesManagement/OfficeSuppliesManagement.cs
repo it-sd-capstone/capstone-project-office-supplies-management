@@ -15,7 +15,7 @@ namespace OfficeSuppliesManagement
             DAO productDAO = new DAO();
 
             // Connect the database to the gridview
-            productBS.DataSource = productDAO.getAllProducts();
+            productBS.DataSource = productDAO.GetAllProducts();
             dataGridView1.DataSource = productBS;
         }
     }
