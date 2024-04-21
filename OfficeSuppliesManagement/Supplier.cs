@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace OfficeSuppliesManagement
 {
-    internal class Supplier
+    public class Supplier
     {
-        public int ID { get; set; }
-        public required String Name { get; set; }
-        public String? PhoneNumber { get; set; }
-        public String? Email { get; set; }
-        public String? Address { get; set; }
-        public required String City { get; set; }
-        public String? Region { get; set; }
-        public required String Country { get; set; }
-        public String? PostalCode { get; set; }
-        public String? SalesRep { get; set;}
+        public int SupplierID { get; set; }
+        public string SupplierName { get; set; }
+        public string? PhoneNumber { get; set; }
+        public string? Email { get; set; }
+        public string? Address { get; set; }
+        public string City { get; set; }
+        public string? Region { get; set; }
+        public string Country { get; set; }
+        public string? PostalCode { get; set; }
+        public string? SalesRepName { get; set; }
     }
 }
