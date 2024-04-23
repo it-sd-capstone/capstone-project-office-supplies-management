@@ -1,3 +1,9 @@
+/*
+ 
+I made the other three forms based on our UI proposal. So although we tested the connection with this form, 
+I'd assume this is going to be our home page. Make adjustments as needed and delete this comment.  
+
+*/
 namespace OfficeSuppliesManagement
 {
     public partial class OfficeSuppliesManagement : Form
