@@ -9,18 +9,18 @@ using System.Threading.Tasks;
 namespace OfficeSuppliesManagement
 {
     internal class DAO
-    { 
+    {
+       
+        private string connStr = "server=localhost;user=root;port=3306;password=mysql";
 
-        // **********************************************************
-        // *** Function to test the connection with the database. ***
-        // **********************************************************
-        //
+        
+        public string ConnStr => connStr;
+
         public List<Product> GetAllProducts()
         {
             List<Product> products = new List<Product>();
 
-            // Connect to the database
-            string connStr = "server=localhost;user=root;port=3306;password=mysql";
+            
             MySqlConnection conn = new MySqlConnection(connStr);
             try
             {
@@ -37,8 +37,11 @@ namespace OfficeSuppliesManagement
             {
                 Console.WriteLine(ex.ToString());
             }
-            conn.Close();
-            Console.WriteLine("Done.");
+            finally
+            {
+                conn.Close();
+                Console.WriteLine("Done.");
+            }
             return products;
         }
     }
