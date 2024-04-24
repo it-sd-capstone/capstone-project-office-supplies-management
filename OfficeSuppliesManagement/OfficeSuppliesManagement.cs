@@ -13,16 +13,27 @@ namespace OfficeSuppliesManagement
         public OfficeSuppliesManagement()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.BackColor = Color.LightGray;
         }
 
         // Button for testing the database connection
         private void button1_Click(object sender, EventArgs e)
         {
             DAO productDAO = new DAO();
+            try
+            {
 
-            // Connect the database to the gridview
-            productBS.DataSource = productDAO.GetAllProducts();
-            dataGridView1.DataSource = productBS;
+                // Connect the database to the gridview
+                productBS.DataSource = productDAO.GetAllProducts();
+                dataGridView1.DataSource = productBS;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

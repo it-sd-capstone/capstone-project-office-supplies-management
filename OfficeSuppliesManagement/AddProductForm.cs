@@ -17,10 +17,39 @@ namespace OfficeSuppliesManagement
         public AddProductForm()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.BackColor = Color.LightGray;
         }
 
         private void btnAddNewProduct_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtDescription.Text) ||
+                string.IsNullOrEmpty(txtPrice.Text) || string.IsNullOrEmpty(txtQuantity.Text) ||
+                string.IsNullOrEmpty(txtCategoryId.Text))
+            {
+                MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!decimal.TryParse(txtPrice.Text, out decimal price))
+            {
+                MessageBox.Show("Please enter a valid price.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(txtQuantity.Text, out int quantity) || quantity < 0)
+            {
+                MessageBox.Show("Please enter a valid quantity.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(txtCategoryId.Text, out int categoryId) || categoryId < 0)
+            {
+                MessageBox.Show("Please enter a valid category ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             DAO dao = new DAO();
             using (var conn = new MySqlConnection(dao.ConnStr))
             {
@@ -76,5 +105,3 @@ namespace OfficeSuppliesManagement
         }
     }
         }
-    }
-} 
