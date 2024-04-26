@@ -35,12 +35,24 @@ namespace OfficeSuppliesManagement
                         while (reader.Read())
                         {
                             // Process each record
-                           
+
                         }
                     }
                     conn.Close();
                 }
             }
+        }
+
+        private void DisplayProductForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DisplayProductForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Visible = false;
+            OfficeSuppliesManagement optionsForm = new OfficeSuppliesManagement();
+            optionsForm.ShowDialog();
         }
     }
 }

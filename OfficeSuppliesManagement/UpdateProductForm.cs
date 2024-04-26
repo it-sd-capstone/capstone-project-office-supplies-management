@@ -41,5 +41,17 @@ namespace OfficeSuppliesManagement
                 }
             }
         }
+
+        private void UpdateProductForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateProductForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Visible = false;
+            OfficeSuppliesManagement optionsForm = new OfficeSuppliesManagement();
+            optionsForm.ShowDialog();
+        }
     }
 }

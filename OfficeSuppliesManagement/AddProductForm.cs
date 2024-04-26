@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -39,6 +40,18 @@ namespace OfficeSuppliesManagement
                     conn.Close();
                 }
             }
+        }
+
+        private void AddProductForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddProductForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Visible = false;
+            OfficeSuppliesManagement optionsForm = new OfficeSuppliesManagement();
+            optionsForm.ShowDialog();
         }
     }
 }

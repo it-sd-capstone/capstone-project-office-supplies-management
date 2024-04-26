@@ -12,9 +12,9 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("OfficeSuppliesManagement")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+294c9cf1f4ae486e31e0315f480a622f488e8da1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d754aeef3ea0d19befb9aa3c54be65f70e4982d8")]
 [assembly: System.Reflection.AssemblyProductAttribute("OfficeSuppliesManagement")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OfficeSuppliesManagement")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
