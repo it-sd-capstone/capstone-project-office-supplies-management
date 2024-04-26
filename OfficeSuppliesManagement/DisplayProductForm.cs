@@ -16,30 +16,57 @@ namespace OfficeSuppliesManagement
         public DisplayProductForm()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.BackColor = Color.LightGray;
         }
 
         private void btnDisplayProductSupplier_Click(object sender, EventArgs e)
         {
-            DAO dao = new DAO();
-            using (var conn = new MySqlConnection(dao.ConnStr))
+            if (string.IsNullOrEmpty(txtProductId.Text))
             {
-                // Calls DisplayProductSupplier SP to display product info
-                using (var cmd = new MySqlCommand("DisplayProductSupplier", conn))
+                MessageBox.Show("Please enter a product ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(txtProductId.Text, out int productId) || productId < 0)
+            {
+                MessageBox.Show("Please enter a valid product ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            DAO dao = new DAO();
+            try
+            {
+                using (var conn = new MySqlConnection(dao.ConnStr))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    //User would enter productID into a text box
-                    cmd.Parameters.AddWithValue("_productId", int.Parse(txtProductId.Text));
-                    conn.Open();
-                    using (var reader = cmd.ExecuteReader())
+                    // Calls DisplayProductSupplier SP to display product info
+                    using (var cmd = new MySqlCommand("DisplayProductSupplier", conn))
                     {
-                        while (reader.Read())
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        //User would enter productID into a text box
+                        cmd.Parameters.AddWithValue("_productId", int.Parse(txtProductId.Text));
+                        conn.Open();
+                        using (var reader = cmd.ExecuteReader())
                         {
+<<<<<<< HEAD
                             // Process each record
 
+=======
+                            while (reader.Read())
+                            {
+                                // Process each record
+
+                            }
+>>>>>>> 7bb66aa359039fa59750fed1f3081654b0da2697
                         }
+                        conn.Close();
                     }
-                    conn.Close();
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

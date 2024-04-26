@@ -7,7 +7,7 @@
 
 3. Download [Git](https://git-scm.com/downloads) 
 
-4.  Clone/fork the project to a directory of your choosing using Git. When Git is open type copy git clone git@github.com:it-sd-capstone/capstone-project-office-supplies-management.git in Git.
+4.  Clone/fork the project to a directory of your choosing using Git. When Git is open type or copy git clone git@github.com:it-sd-capstone/capstone-project-office-supplies-management.git in Git.
 
 5. Open the folder that the files are in, and open the file called OfficeSuppliesManagement.sln
 
