@@ -189,8 +189,6 @@
         }
 
         #endregion
-
-        private Button btnAddNewProduct;
         private Label lblName;
         private Label lblDescription;
         private Label lblPrice;
@@ -203,5 +201,6 @@
         private TextBox txtCategoryId;
         private Label lblProductId;
         private TextBox txtProductId;
+        public Button btnAddNewProduct;
     }
 }

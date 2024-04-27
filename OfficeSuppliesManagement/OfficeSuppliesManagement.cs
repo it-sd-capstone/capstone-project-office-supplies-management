@@ -14,24 +14,9 @@ namespace OfficeSuppliesManagement
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             this.Visible = false;
             AddProductForm addProductForm = new AddProductForm();
             addProductForm.ShowDialog();
-=======
-            DAO productDAO = new DAO();
-            try
-            {
-
-                // Connect the database to the gridview
-                productBS.DataSource = productDAO.GetAllProducts();
-                dataGridView1.DataSource = productBS;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
->>>>>>> 7bb66aa359039fa59750fed1f3081654b0da2697
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

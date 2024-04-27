@@ -16,10 +16,6 @@ namespace OfficeSuppliesManagement
         public DisplayProductForm()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.BackColor = Color.LightGray;
         }
 
         private void btnDisplayProductSupplier_Click(object sender, EventArgs e)
@@ -49,16 +45,13 @@ namespace OfficeSuppliesManagement
                         conn.Open();
                         using (var reader = cmd.ExecuteReader())
                         {
-<<<<<<< HEAD
                             // Process each record
 
-=======
                             while (reader.Read())
                             {
                                 // Process each record
 
                             }
->>>>>>> 7bb66aa359039fa59750fed1f3081654b0da2697
                         }
                         conn.Close();
                     }

@@ -18,10 +18,6 @@ namespace OfficeSuppliesManagement
         public AddProductForm()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.BackColor = Color.LightGray;
         }
 
         private void btnAddNewProduct_Click(object sender, EventArgs e)
@@ -51,6 +47,7 @@ namespace OfficeSuppliesManagement
                 MessageBox.Show("Please enter a valid category ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
             DAO dao = new DAO();
             using (var conn = new MySqlConnection(dao.ConnStr))
             {
@@ -70,11 +67,13 @@ namespace OfficeSuppliesManagement
                 }
             }
         }
-<<<<<<< HEAD
 
         private void AddProductForm_Load(object sender, EventArgs e)
         {
-
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.BackColor = Color.LightGray;
         }
 
         private void AddProductForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -82,8 +81,9 @@ namespace OfficeSuppliesManagement
             this.Visible = false;
             OfficeSuppliesManagement optionsForm = new OfficeSuppliesManagement();
             optionsForm.ShowDialog();
-=======
-                 public string ProductName
+        }
+
+        public string ProductName
         {
             get { return txtName.Text; }
             set { txtName.Text = value; }
@@ -112,11 +112,5 @@ namespace OfficeSuppliesManagement
             get { return txtCategoryId.Text; }
             set { txtCategoryId.Text = value; }
         }
-
-        public void TriggerAddNewProductButtonClick()
-        {
-            btnAddNewProduct_Click(this, EventArgs.Empty);
->>>>>>> 7bb66aa359039fa59750fed1f3081654b0da2697
-        }
     }
-        }
+}

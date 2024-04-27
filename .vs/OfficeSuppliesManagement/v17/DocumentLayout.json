@@ -1,47 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\codyh\\OneDrive\\Desktop\\capstone-project-office-supplies-management\\",
+  "WorkspaceRootPath": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\",
   "Documents": [
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|c:\\users\\gabes\\onedrive - chippewa valley technical college\\it-developercapstone\\capstone-project-office-supplies-management\\officesuppliesmanagement\\displayproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|solutionrelative:officesuppliesmanagement\\displayproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\officesuppliesmanagement\\officesuppliesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|solutionrelative:officesuppliesmanagement\\officesuppliesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|c:\\users\\gabes\\onedrive - chippewa valley technical college\\it-developercapstone\\capstone-project-office-supplies-management\\officesuppliesmanagement\\displayproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|solutionrelative:officesuppliesmanagement\\displayproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|c:\\users\\gabes\\onedrive - chippewa valley technical college\\it-developercapstone\\capstone-project-office-supplies-management\\officesuppliesmanagement\\addproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\officesuppliesmanagement\\addproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|solutionrelative:officesuppliesmanagement\\addproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|c:\\users\\gabes\\onedrive - chippewa valley technical college\\it-developercapstone\\capstone-project-office-supplies-management\\officesuppliesmanagement\\officesuppliesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|solutionrelative:officesuppliesmanagement\\officesuppliesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\officesuppliesmanagement\\displayproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|solutionrelative:officesuppliesmanagement\\displayproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|c:\\users\\gabes\\onedrive - chippewa valley technical college\\it-developercapstone\\capstone-project-office-supplies-management\\officesuppliesmanagement\\officesuppliesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|solutionrelative:officesuppliesmanagement\\officesuppliesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|c:\\users\\codyh\\onedrive\\desktop\\capstone-project-office-supplies-management\\officesuppliesmanagement\\officesuppliesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|solutionrelative:officesuppliesmanagement\\officesuppliesmanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|c:\\users\\codyh\\onedrive\\desktop\\capstone-project-office-supplies-management\\officesuppliesmanagement\\updateproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\officesuppliesmanagement\\updateproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|solutionrelative:officesuppliesmanagement\\updateproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|c:\\users\\codyh\\onedrive\\desktop\\capstone-project-office-supplies-management\\officesuppliesmanagement\\displayproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|solutionrelative:officesuppliesmanagement\\displayproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|c:\\users\\codyh\\onedrive\\desktop\\capstone-project-office-supplies-management\\officesuppliesmanagement\\addproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|solutionrelative:officesuppliesmanagement\\addproductform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|c:\\users\\codyh\\onedrive\\desktop\\capstone-project-office-supplies-management\\officesuppliesmanagement\\tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2377E9AB-5632-429B-9E0D-950CF1B686BD}|OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj|solutionrelative:officesuppliesmanagement\\tests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> 7bb66aa359039fa59750fed1f3081654b0da2697
     }
   ],
   "DocumentGroupContainers": [
@@ -51,11 +26,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-<<<<<<< HEAD
-          "SelectedChildIndex": 2,
-=======
-          "SelectedChildIndex": 3,
->>>>>>> 7bb66aa359039fa59750fed1f3081654b0da2697
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -63,125 +34,54 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
-              "DocumentIndex": 1,
-              "Title": "DisplayProductForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\DisplayProductForm.cs",
-=======
-              "DocumentIndex": 2,
-              "Title": "DisplayProductForm.cs",
-              "DocumentMoniker": "C:\\Users\\codyh\\OneDrive\\Desktop\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\DisplayProductForm.cs",
->>>>>>> 7bb66aa359039fa59750fed1f3081654b0da2697
-              "RelativeDocumentMoniker": "OfficeSuppliesManagement\\DisplayProductForm.cs",
-              "ToolTip": "C:\\Users\\codyh\\OneDrive\\Desktop\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\DisplayProductForm.cs",
-              "RelativeToolTip": "OfficeSuppliesManagement\\DisplayProductForm.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAEAAAAANAAAA",
+              "DocumentIndex": 3,
+              "Title": "UpdateProductForm.cs",
+              "DocumentMoniker": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\UpdateProductForm.cs",
+              "RelativeDocumentMoniker": "OfficeSuppliesManagement\\UpdateProductForm.cs",
+              "ToolTip": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\UpdateProductForm.cs",
+              "RelativeToolTip": "OfficeSuppliesManagement\\UpdateProductForm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAG8AAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-<<<<<<< HEAD
-              "WhenOpened": "2024-04-26T21:39:07.584Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-26T22:58:05.844Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "DisplayProductForm.cs",
               "DocumentMoniker": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\DisplayProductForm.cs",
               "RelativeDocumentMoniker": "OfficeSuppliesManagement\\DisplayProductForm.cs",
               "ToolTip": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\DisplayProductForm.cs",
               "RelativeToolTip": "OfficeSuppliesManagement\\DisplayProductForm.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAMwDcAAAAJAAAA",
+              "ViewState": "AQIAAC8AAACAl5mZmZkXwEsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-26T21:02:56.585Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "AddProductForm.cs",
               "DocumentMoniker": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\AddProductForm.cs",
               "RelativeDocumentMoniker": "OfficeSuppliesManagement\\AddProductForm.cs",
               "ToolTip": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\AddProductForm.cs",
               "RelativeToolTip": "OfficeSuppliesManagement\\AddProductForm.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAcwDMAAAAhAAAA",
+              "ViewState": "AQIAAC0AAAAAmJmZmdknwEoAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-26T21:02:51.639Z",
-=======
-              "WhenOpened": "2024-04-24T21:24:10.103Z",
->>>>>>> 7bb66aa359039fa59750fed1f3081654b0da2697
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-<<<<<<< HEAD
-              "Title": "OfficeSuppliesManagement.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\OfficeSuppliesManagement.cs",
-              "RelativeDocumentMoniker": "OfficeSuppliesManagement\\OfficeSuppliesManagement.cs",
-              "ToolTip": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\OfficeSuppliesManagement.cs [Design]",
-              "RelativeToolTip": "OfficeSuppliesManagement\\OfficeSuppliesManagement.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T20:51:23.937Z",
-              "EditorCaption": " [Design]"
-=======
-              "Title": "AddProductForm.cs",
-              "DocumentMoniker": "C:\\Users\\codyh\\OneDrive\\Desktop\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\AddProductForm.cs",
-              "RelativeDocumentMoniker": "OfficeSuppliesManagement\\AddProductForm.cs",
-              "ToolTip": "C:\\Users\\codyh\\OneDrive\\Desktop\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\AddProductForm.cs",
-              "RelativeToolTip": "OfficeSuppliesManagement\\AddProductForm.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAowFkAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T21:22:00.348Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "OfficeSuppliesManagement.cs",
-              "DocumentMoniker": "C:\\Users\\codyh\\OneDrive\\Desktop\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\OfficeSuppliesManagement.cs",
-              "RelativeDocumentMoniker": "OfficeSuppliesManagement\\OfficeSuppliesManagement.cs",
-              "ToolTip": "C:\\Users\\codyh\\OneDrive\\Desktop\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\OfficeSuppliesManagement.cs",
-              "RelativeToolTip": "OfficeSuppliesManagement\\OfficeSuppliesManagement.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwB8AAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T21:24:12.112Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UpdateProductForm.cs",
-              "DocumentMoniker": "C:\\Users\\codyh\\OneDrive\\Desktop\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\UpdateProductForm.cs",
-              "RelativeDocumentMoniker": "OfficeSuppliesManagement\\UpdateProductForm.cs",
-              "ToolTip": "C:\\Users\\codyh\\OneDrive\\Desktop\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\UpdateProductForm.cs",
-              "RelativeToolTip": "OfficeSuppliesManagement\\UpdateProductForm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFIAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T21:06:01.284Z",
-              "EditorCaption": ""
->>>>>>> 7bb66aa359039fa59750fed1f3081654b0da2697
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-<<<<<<< HEAD
-              "Title": "OfficeSuppliesManagement.cs",
               "DocumentMoniker": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\OfficeSuppliesManagement.cs",
               "RelativeDocumentMoniker": "OfficeSuppliesManagement\\OfficeSuppliesManagement.cs",
               "ToolTip": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\OfficeSuppliesManagement.cs",
               "RelativeToolTip": "OfficeSuppliesManagement\\OfficeSuppliesManagement.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-26T20:49:25.814Z",
-=======
-              "Title": "Tests.cs",
-              "DocumentMoniker": "C:\\Users\\codyh\\OneDrive\\Desktop\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\Tests.cs",
-              "RelativeDocumentMoniker": "OfficeSuppliesManagement\\Tests.cs",
-              "ToolTip": "C:\\Users\\codyh\\OneDrive\\Desktop\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\Tests.cs",
-              "RelativeToolTip": "OfficeSuppliesManagement\\Tests.cs",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAAwEgAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T21:05:33.902Z",
->>>>>>> 7bb66aa359039fa59750fed1f3081654b0da2697
               "EditorCaption": ""
             }
           ]
