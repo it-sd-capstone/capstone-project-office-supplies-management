@@ -16,10 +16,6 @@ namespace OfficeSuppliesManagement
         public DisplayProductForm()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.BackColor = Color.LightGray;
         }
 
         private void btnDisplayProductSupplier_Click(object sender, EventArgs e)
@@ -49,6 +45,8 @@ namespace OfficeSuppliesManagement
                         conn.Open();
                         using (var reader = cmd.ExecuteReader())
                         {
+                            // Process each record
+
                             while (reader.Read())
                             {
                                 // Process each record
@@ -63,6 +61,18 @@ namespace OfficeSuppliesManagement
             {
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void DisplayProductForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DisplayProductForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Visible = false;
+            OfficeSuppliesManagement optionsForm = new OfficeSuppliesManagement();
+            optionsForm.ShowDialog();
         }
     }
 }

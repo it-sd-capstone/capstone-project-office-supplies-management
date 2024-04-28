@@ -17,10 +17,6 @@ namespace OfficeSuppliesManagement
         public UpdateProductForm()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.BackColor = Color.LightGray;
         }
 
         private void updateButton_Click(object sender, EventArgs e)
@@ -78,11 +74,13 @@ namespace OfficeSuppliesManagement
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-            public string ProductName
+
+        public string ProductName
         {
             get { return txtName.Text; }
             set { txtName.Text = value; }
         }
+
         public string ProductDescription
         {
             get { return txtDescription.Text; }
@@ -107,9 +105,19 @@ namespace OfficeSuppliesManagement
             set { txtCategoryId.Text = value; }
         }
 
-        public void TriggerUpdateButtonClick()
+        private void UpdateProductForm_Load(object sender, EventArgs e)
         {
-            updateButton_Click(this, EventArgs.Empty);
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.BackColor = Color.LightGray;
+        }
+
+        private void UpdateProductForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Visible = false;
+            OfficeSuppliesManagement optionsForm = new OfficeSuppliesManagement();
+            optionsForm.ShowDialog();
         }
     }
-    }
+}

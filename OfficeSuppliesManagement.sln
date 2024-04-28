@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeSuppliesManagement", "OfficeSuppliesManagement\OfficeSuppliesManagement.csproj", "{2377E9AB-5632-429B-9E0D-950CF1B686BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfficeSuppliesManagement", "OfficeSuppliesManagement\OfficeSuppliesManagement.csproj", "{2377E9AB-5632-429B-9E0D-950CF1B686BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeSuppliesManagementTest", "OfficeSuppliesManagementTest\OfficeSuppliesManagementTest.csproj", "{C4A4552B-3D9E-42C3-8EE7-DD901289CEC8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{2377E9AB-5632-429B-9E0D-950CF1B686BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2377E9AB-5632-429B-9E0D-950CF1B686BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2377E9AB-5632-429B-9E0D-950CF1B686BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4A4552B-3D9E-42C3-8EE7-DD901289CEC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4A4552B-3D9E-42C3-8EE7-DD901289CEC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4A4552B-3D9E-42C3-8EE7-DD901289CEC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4A4552B-3D9E-42C3-8EE7-DD901289CEC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -28,45 +28,76 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            btnAdd = new Button();
+            label1 = new Label();
+            btnDisplay = new Button();
+            btnUpdate = new Button();
             SuspendLayout();
             // 
-            // button1
+            // btnAdd
             // 
-            button1.Location = new Point(347, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(130, 23);
-            button1.TabIndex = 0;
-            button1.Text = "Show Products";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnAdd.Location = new Point(15, 271);
+            btnAdd.Margin = new Padding(6);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(250, 200);
+            btnAdd.TabIndex = 0;
+            btnAdd.Text = "Add New Product";
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
-            // dataGridView1
+            // label1
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(483, 12);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(722, 328);
-            dataGridView1.TabIndex = 1;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(279, 85);
+            label1.Name = "label1";
+            label1.Size = new Size(537, 50);
+            label1.TabIndex = 1;
+            label1.Text = "Supplies Management Options:";
+            // 
+            // btnDisplay
+            // 
+            btnDisplay.Location = new Point(861, 271);
+            btnDisplay.Margin = new Padding(6);
+            btnDisplay.Name = "btnDisplay";
+            btnDisplay.Size = new Size(250, 200);
+            btnDisplay.TabIndex = 2;
+            btnDisplay.Text = "Display Product/Supplier Information";
+            btnDisplay.UseVisualStyleBackColor = true;
+            btnDisplay.Click += btnDisplay_Click;
+            // 
+            // btnUpdate
+            // 
+            btnUpdate.Location = new Point(427, 271);
+            btnUpdate.Margin = new Padding(6);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(250, 200);
+            btnUpdate.TabIndex = 3;
+            btnUpdate.Text = "Update Existing Product";
+            btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // OfficeSuppliesManagement
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1217, 623);
-            Controls.Add(dataGridView1);
-            Controls.Add(button1);
+            ClientSize = new Size(1126, 660);
+            Controls.Add(btnUpdate);
+            Controls.Add(btnDisplay);
+            Controls.Add(label1);
+            Controls.Add(btnAdd);
+            Margin = new Padding(6);
             Name = "OfficeSuppliesManagement";
             Text = "Office Supplies Management";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
-        private DataGridView dataGridView1;
+        private Button btnAdd;
+        private Label label1;
+        private Button btnDisplay;
+        private Button btnUpdate;
     }
 }
