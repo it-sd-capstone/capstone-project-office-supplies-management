@@ -56,11 +56,11 @@ namespace OfficeSuppliesManagement
                 {
                     //Need to add text box controls for the underlined
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("_name", txtName.Text);
-                    cmd.Parameters.AddWithValue("_description", txtDescription.Text);
-                    cmd.Parameters.AddWithValue("_price", decimal.Parse(txtPrice.Text));
-                    cmd.Parameters.AddWithValue("_quantity", int.Parse(txtQuantity.Text));
-                    cmd.Parameters.AddWithValue("_categoryId", int.Parse(txtCategoryId.Text));
+                    cmd.Parameters.AddWithValue("_name", txtName.Text.Trim());
+                    cmd.Parameters.AddWithValue("_description", txtDescription.Text.Trim());
+                    cmd.Parameters.AddWithValue("_price", decimal.Parse(txtPrice.Text.Trim()));
+                    cmd.Parameters.AddWithValue("_quantity", int.Parse(txtQuantity.Text.Trim()));
+                    cmd.Parameters.AddWithValue("_categoryId", int.Parse(txtCategoryId.Text.Trim()));
                     conn.Open();
                     cmd.ExecuteNonQuery();
                     conn.Close();

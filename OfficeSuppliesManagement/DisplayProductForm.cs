@@ -41,7 +41,7 @@ namespace OfficeSuppliesManagement
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         //User would enter productID into a text box
-                        cmd.Parameters.AddWithValue("_productId", int.Parse(txtProductId.Text));
+                        cmd.Parameters.AddWithValue("_productId", int.Parse(txtProductId.Text.Trim()));
                         conn.Open();
                         using (var reader = cmd.ExecuteReader())
                         {
