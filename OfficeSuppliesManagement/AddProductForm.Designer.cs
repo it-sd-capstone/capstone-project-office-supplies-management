@@ -41,14 +41,14 @@
             txtCategoryId = new TextBox();
             lblProductId = new Label();
             txtProductId = new TextBox();
+            btnBackAddProduct = new Button();
             SuspendLayout();
             // 
             // btnAddNewProduct
             // 
-            btnAddNewProduct.Location = new Point(268, 707);
-            btnAddNewProduct.Margin = new Padding(6);
+            btnAddNewProduct.Location = new Point(259, 329);
             btnAddNewProduct.Name = "btnAddNewProduct";
-            btnAddNewProduct.Size = new Size(247, 62);
+            btnAddNewProduct.Size = new Size(133, 29);
             btnAddNewProduct.TabIndex = 0;
             btnAddNewProduct.Text = "Add Product";
             btnAddNewProduct.UseVisualStyleBackColor = true;
@@ -57,115 +57,118 @@
             // lblName
             // 
             lblName.AutoSize = true;
-            lblName.Location = new Point(22, 148);
-            lblName.Margin = new Padding(6, 0, 6, 0);
+            lblName.Location = new Point(12, 69);
             lblName.Name = "lblName";
-            lblName.Size = new Size(83, 32);
+            lblName.Size = new Size(42, 15);
             lblName.TabIndex = 1;
             lblName.Text = "Name:";
             // 
             // lblDescription
             // 
             lblDescription.AutoSize = true;
-            lblDescription.Location = new Point(22, 246);
-            lblDescription.Margin = new Padding(6, 0, 6, 0);
+            lblDescription.Location = new Point(12, 115);
             lblDescription.Name = "lblDescription";
-            lblDescription.Size = new Size(140, 32);
+            lblDescription.Size = new Size(70, 15);
             lblDescription.TabIndex = 2;
             lblDescription.Text = "Description:";
             // 
             // lblPrice
             // 
             lblPrice.AutoSize = true;
-            lblPrice.Location = new Point(22, 344);
-            lblPrice.Margin = new Padding(6, 0, 6, 0);
+            lblPrice.Location = new Point(12, 161);
             lblPrice.Name = "lblPrice";
-            lblPrice.Size = new Size(70, 32);
+            lblPrice.Size = new Size(36, 15);
             lblPrice.TabIndex = 3;
             lblPrice.Text = "Price:";
             // 
             // lblQuantity
             // 
             lblQuantity.AutoSize = true;
-            lblQuantity.Location = new Point(22, 445);
-            lblQuantity.Margin = new Padding(6, 0, 6, 0);
+            lblQuantity.Location = new Point(12, 209);
             lblQuantity.Name = "lblQuantity";
-            lblQuantity.Size = new Size(111, 32);
+            lblQuantity.Size = new Size(56, 15);
             lblQuantity.TabIndex = 4;
             lblQuantity.Text = "Quantity:";
             // 
             // lblCategoryId
             // 
             lblCategoryId.AutoSize = true;
-            lblCategoryId.Location = new Point(22, 546);
-            lblCategoryId.Margin = new Padding(6, 0, 6, 0);
+            lblCategoryId.Location = new Point(12, 256);
             lblCategoryId.Name = "lblCategoryId";
-            lblCategoryId.Size = new Size(145, 32);
+            lblCategoryId.Size = new Size(72, 15);
             lblCategoryId.TabIndex = 5;
             lblCategoryId.Text = "Category ID:";
             // 
             // txtName
             // 
-            txtName.Location = new Point(179, 145);
-            txtName.Margin = new Padding(6);
+            txtName.Location = new Point(96, 68);
             txtName.Name = "txtName";
-            txtName.Size = new Size(546, 39);
+            txtName.Size = new Size(296, 23);
             txtName.TabIndex = 6;
             // 
             // txtDescription
             // 
-            txtDescription.Location = new Point(179, 243);
-            txtDescription.Margin = new Padding(6);
+            txtDescription.Location = new Point(96, 114);
             txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(546, 39);
+            txtDescription.Size = new Size(296, 23);
             txtDescription.TabIndex = 7;
             // 
             // txtPrice
             // 
-            txtPrice.Location = new Point(179, 341);
-            txtPrice.Margin = new Padding(6);
+            txtPrice.Location = new Point(96, 160);
             txtPrice.Name = "txtPrice";
-            txtPrice.Size = new Size(546, 39);
+            txtPrice.Size = new Size(296, 23);
             txtPrice.TabIndex = 8;
             // 
             // txtQuantity
             // 
-            txtQuantity.Location = new Point(179, 442);
-            txtQuantity.Margin = new Padding(6);
+            txtQuantity.Location = new Point(96, 207);
             txtQuantity.Name = "txtQuantity";
-            txtQuantity.Size = new Size(546, 39);
+            txtQuantity.Size = new Size(296, 23);
             txtQuantity.TabIndex = 9;
             // 
             // txtCategoryId
             // 
-            txtCategoryId.Location = new Point(179, 543);
-            txtCategoryId.Margin = new Padding(6);
+            txtCategoryId.Location = new Point(96, 255);
             txtCategoryId.Name = "txtCategoryId";
-            txtCategoryId.Size = new Size(546, 39);
+            txtCategoryId.Size = new Size(296, 23);
             txtCategoryId.TabIndex = 10;
             // 
             // lblProductId
             // 
             lblProductId.AutoSize = true;
-            lblProductId.Location = new Point(22, 56);
+            lblProductId.Location = new Point(12, 26);
+            lblProductId.Margin = new Padding(2, 0, 2, 0);
             lblProductId.Name = "lblProductId";
-            lblProductId.Size = new Size(131, 32);
+            lblProductId.Size = new Size(66, 15);
             lblProductId.TabIndex = 11;
             lblProductId.Text = "Product ID:";
             // 
             // txtProductId
             // 
             txtProductId.Enabled = false;
-            txtProductId.Location = new Point(179, 53);
+            txtProductId.Location = new Point(96, 25);
+            txtProductId.Margin = new Padding(2, 1, 2, 1);
             txtProductId.Name = "txtProductId";
-            txtProductId.Size = new Size(200, 39);
+            txtProductId.Size = new Size(110, 23);
             txtProductId.TabIndex = 12;
+            // 
+            // btnBackAddProduct
+            // 
+            btnBackAddProduct.Location = new Point(96, 329);
+            btnBackAddProduct.Name = "btnBackAddProduct";
+            btnBackAddProduct.Size = new Size(133, 29);
+            btnBackAddProduct.TabIndex = 13;
+            btnBackAddProduct.Text = "Back";
+            btnBackAddProduct.UseVisualStyleBackColor = true;
+            btnBackAddProduct.Click += btnBackAddProduct_Click;
             // 
             // AddProductForm
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(804, 865);
+            ClientSize = new Size(433, 405);
+            Controls.Add(btnBackAddProduct);
             Controls.Add(txtProductId);
             Controls.Add(lblProductId);
             Controls.Add(txtCategoryId);
@@ -179,7 +182,6 @@
             Controls.Add(lblDescription);
             Controls.Add(lblName);
             Controls.Add(btnAddNewProduct);
-            Margin = new Padding(6);
             Name = "AddProductForm";
             Text = "AddProductForm";
             FormClosed += AddProductForm_FormClosed;
@@ -202,5 +204,6 @@
         private Label lblProductId;
         private TextBox txtProductId;
         public Button btnAddNewProduct;
+        private Button btnBackAddProduct;
     }
 }

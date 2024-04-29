@@ -41,13 +41,14 @@
             txtPrice = new TextBox();
             txtQuantity = new TextBox();
             txtCategoryId = new TextBox();
+            btnBackUpdateProduct = new Button();
             SuspendLayout();
             // 
             // btnUpdateProduct
             // 
-            btnUpdateProduct.Location = new Point(121, 383);
+            btnUpdateProduct.Location = new Point(254, 378);
             btnUpdateProduct.Name = "btnUpdateProduct";
-            btnUpdateProduct.Size = new Size(152, 32);
+            btnUpdateProduct.Size = new Size(110, 32);
             btnUpdateProduct.TabIndex = 0;
             btnUpdateProduct.Text = "Update Product";
             btnUpdateProduct.UseVisualStyleBackColor = true;
@@ -149,11 +150,22 @@
             txtCategoryId.Size = new Size(274, 23);
             txtCategoryId.TabIndex = 12;
             // 
+            // btnBackUpdateProduct
+            // 
+            btnBackUpdateProduct.Location = new Point(90, 378);
+            btnBackUpdateProduct.Name = "btnBackUpdateProduct";
+            btnBackUpdateProduct.Size = new Size(110, 32);
+            btnBackUpdateProduct.TabIndex = 13;
+            btnBackUpdateProduct.Text = "Back";
+            btnBackUpdateProduct.UseVisualStyleBackColor = true;
+            btnBackUpdateProduct.Click += btnBackUpdateProduct_Click;
+            // 
             // UpdateProductForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(430, 450);
+            Controls.Add(btnBackUpdateProduct);
             Controls.Add(txtCategoryId);
             Controls.Add(txtQuantity);
             Controls.Add(txtPrice);
@@ -189,5 +201,6 @@
         private TextBox txtQuantity;
         private TextBox txtCategoryId;
         public Button btnUpdateProduct;
+        private Button btnBackUpdateProduct;
     }
 }

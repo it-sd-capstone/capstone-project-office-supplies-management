@@ -139,5 +139,12 @@ namespace OfficeSuppliesManagement
             OfficeSuppliesManagement optionsForm = new OfficeSuppliesManagement();
             optionsForm.ShowDialog();
         }
+
+        private void btnBackUpdateProduct_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            OfficeSuppliesManagement mainForm = new OfficeSuppliesManagement();
+            mainForm.Show();
+        }
     }
 }

@@ -92,6 +92,13 @@ namespace OfficeSuppliesManagement
             optionsForm.ShowDialog();
         }
 
+        private void btnBackAddProduct_Click(object sender, EventArgs e)
+        {
+            this.Close();  
+            OfficeSuppliesManagement mainForm = new OfficeSuppliesManagement();
+            mainForm.Show(); 
+        }
+
         public string ProductName
         {
             get { return txtName.Text; }
