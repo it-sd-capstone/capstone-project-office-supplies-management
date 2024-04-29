@@ -45,10 +45,9 @@
             // 
             // btnUpdateProduct
             // 
-            btnUpdateProduct.Location = new Point(225, 817);
-            btnUpdateProduct.Margin = new Padding(6);
+            btnUpdateProduct.Location = new Point(121, 383);
             btnUpdateProduct.Name = "btnUpdateProduct";
-            btnUpdateProduct.Size = new Size(282, 68);
+            btnUpdateProduct.Size = new Size(152, 32);
             btnUpdateProduct.TabIndex = 0;
             btnUpdateProduct.Text = "Update Product";
             btnUpdateProduct.UseVisualStyleBackColor = true;
@@ -57,117 +56,104 @@
             // lblProductId
             // 
             lblProductId.AutoSize = true;
-            lblProductId.Location = new Point(22, 19);
-            lblProductId.Margin = new Padding(6, 0, 6, 0);
+            lblProductId.Location = new Point(12, 9);
             lblProductId.Name = "lblProductId";
-            lblProductId.Size = new Size(131, 32);
+            lblProductId.Size = new Size(66, 15);
             lblProductId.TabIndex = 1;
             lblProductId.Text = "Product ID:";
             // 
             // lblName
             // 
             lblName.AutoSize = true;
-            lblName.Location = new Point(22, 149);
-            lblName.Margin = new Padding(6, 0, 6, 0);
+            lblName.Location = new Point(12, 70);
             lblName.Name = "lblName";
-            lblName.Size = new Size(83, 32);
+            lblName.Size = new Size(42, 15);
             lblName.TabIndex = 2;
             lblName.Text = "Name:";
             // 
             // lblDescription
             // 
             lblDescription.AutoSize = true;
-            lblDescription.Location = new Point(22, 275);
-            lblDescription.Margin = new Padding(6, 0, 6, 0);
+            lblDescription.Location = new Point(12, 129);
             lblDescription.Name = "lblDescription";
-            lblDescription.Size = new Size(140, 32);
+            lblDescription.Size = new Size(70, 15);
             lblDescription.TabIndex = 3;
             lblDescription.Text = "Description:";
             // 
             // lblPrice
             // 
             lblPrice.AutoSize = true;
-            lblPrice.Location = new Point(22, 414);
-            lblPrice.Margin = new Padding(6, 0, 6, 0);
+            lblPrice.Location = new Point(12, 194);
             lblPrice.Name = "lblPrice";
-            lblPrice.Size = new Size(70, 32);
+            lblPrice.Size = new Size(36, 15);
             lblPrice.TabIndex = 4;
             lblPrice.Text = "Price:";
             // 
             // lblQuantity
             // 
             lblQuantity.AutoSize = true;
-            lblQuantity.Location = new Point(22, 561);
-            lblQuantity.Margin = new Padding(6, 0, 6, 0);
+            lblQuantity.Location = new Point(12, 263);
             lblQuantity.Name = "lblQuantity";
-            lblQuantity.Size = new Size(111, 32);
+            lblQuantity.Size = new Size(56, 15);
             lblQuantity.TabIndex = 5;
             lblQuantity.Text = "Quantity:";
             // 
             // lblCategoryId
             // 
             lblCategoryId.AutoSize = true;
-            lblCategoryId.Location = new Point(22, 691);
-            lblCategoryId.Margin = new Padding(6, 0, 6, 0);
+            lblCategoryId.Location = new Point(12, 324);
             lblCategoryId.Name = "lblCategoryId";
-            lblCategoryId.Size = new Size(145, 32);
+            lblCategoryId.Size = new Size(72, 15);
             lblCategoryId.TabIndex = 6;
             lblCategoryId.Text = "Category ID:";
             // 
             // txtProductId
             // 
-            txtProductId.Enabled = false;
-            txtProductId.Location = new Point(167, 13);
-            txtProductId.Margin = new Padding(6);
+            txtProductId.Location = new Point(90, 6);
             txtProductId.Name = "txtProductId";
-            txtProductId.Size = new Size(215, 39);
+            txtProductId.Size = new Size(118, 23);
             txtProductId.TabIndex = 7;
             // 
             // txtDescription
             // 
-            txtDescription.Location = new Point(167, 269);
-            txtDescription.Margin = new Padding(6);
+            txtDescription.Location = new Point(90, 126);
             txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(505, 39);
+            txtDescription.Size = new Size(274, 23);
             txtDescription.TabIndex = 8;
             // 
             // txtName
             // 
-            txtName.Location = new Point(167, 143);
-            txtName.Margin = new Padding(6);
+            txtName.Location = new Point(90, 67);
             txtName.Name = "txtName";
-            txtName.Size = new Size(505, 39);
+            txtName.Size = new Size(274, 23);
             txtName.TabIndex = 9;
             // 
             // txtPrice
             // 
-            txtPrice.Location = new Point(167, 407);
-            txtPrice.Margin = new Padding(6);
+            txtPrice.Location = new Point(90, 191);
             txtPrice.Name = "txtPrice";
-            txtPrice.Size = new Size(505, 39);
+            txtPrice.Size = new Size(274, 23);
             txtPrice.TabIndex = 10;
             // 
             // txtQuantity
             // 
-            txtQuantity.Location = new Point(167, 555);
-            txtQuantity.Margin = new Padding(6);
+            txtQuantity.Location = new Point(90, 260);
             txtQuantity.Name = "txtQuantity";
-            txtQuantity.Size = new Size(505, 39);
+            txtQuantity.Size = new Size(274, 23);
             txtQuantity.TabIndex = 11;
             // 
             // txtCategoryId
             // 
-            txtCategoryId.Location = new Point(167, 685);
-            txtCategoryId.Margin = new Padding(6);
+            txtCategoryId.Location = new Point(90, 321);
             txtCategoryId.Name = "txtCategoryId";
-            txtCategoryId.Size = new Size(505, 39);
+            txtCategoryId.Size = new Size(274, 23);
             txtCategoryId.TabIndex = 12;
             // 
             // UpdateProductForm
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(799, 960);
+            ClientSize = new Size(430, 450);
             Controls.Add(txtCategoryId);
             Controls.Add(txtQuantity);
             Controls.Add(txtPrice);
@@ -181,7 +167,6 @@
             Controls.Add(lblName);
             Controls.Add(lblProductId);
             Controls.Add(btnUpdateProduct);
-            Margin = new Padding(6);
             Name = "UpdateProductForm";
             Text = "Update Product";
             FormClosed += UpdateProductForm_FormClosed;

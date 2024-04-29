@@ -19,13 +19,25 @@ namespace OfficeSuppliesManagement
             InitializeComponent();
         }
 
+        /*
+        Changed some of the code below so that the user can specify which product to update using the ProductID.
+        Next week I'll work on the user interface to actually display all of the products so that the user can see
+        all products and their ID's - AB 4/28/2024
+        */
         private void updateButton_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtName.Text.Trim()) || string.IsNullOrEmpty(txtDescription.Text.Trim()) ||
+            if (string.IsNullOrEmpty(txtProductId.Text.Trim()) || string.IsNullOrEmpty(txtName.Text.Trim()) || string.IsNullOrEmpty(txtDescription.Text.Trim()) ||
                 string.IsNullOrEmpty(txtPrice.Text.Trim()) || string.IsNullOrEmpty(txtQuantity.Text.Trim()) ||
                 string.IsNullOrEmpty(txtCategoryId.Text.Trim()))
             {
                 MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var input = txtProductId.Text.Trim();
+            if (string.IsNullOrWhiteSpace(input) || !int.TryParse(input, out int productId) || productId <= 0)
+            {
+                MessageBox.Show("Please enter a valid product ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -57,7 +69,7 @@ namespace OfficeSuppliesManagement
                     {
                         //Need to add text box controls for the underlined
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("_productId", int.Parse(lblProductId.Text.Trim()));
+                        cmd.Parameters.AddWithValue("_productId", productId);
                         cmd.Parameters.AddWithValue("_name", txtName.Text.Trim());
                         cmd.Parameters.AddWithValue("_description", txtDescription.Text.Trim());
                         cmd.Parameters.AddWithValue("_price", decimal.Parse(txtPrice.Text.Trim()));
