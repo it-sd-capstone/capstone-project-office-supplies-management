@@ -64,6 +64,15 @@ namespace OfficeSuppliesManagement
                     conn.Open();
                     cmd.ExecuteNonQuery();
                     conn.Close();
+
+                    //Success message and clear the text boxes
+                    MessageBox.Show("Product added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtName.Clear();
+                    txtDescription.Clear();
+                    txtPrice.Clear();
+                    txtQuantity.Clear();
+                    txtCategoryId.Clear();
+                    conn.Close();
                 }
             }
         }
