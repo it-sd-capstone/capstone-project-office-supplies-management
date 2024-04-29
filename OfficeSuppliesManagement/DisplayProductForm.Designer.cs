@@ -31,14 +31,14 @@
             btnDisplayProductSupplier = new Button();
             lblProductId = new Label();
             txtProductId = new TextBox();
+            btnBackDisplayProduct = new Button();
             SuspendLayout();
             // 
             // btnDisplayProductSupplier
             // 
-            btnDisplayProductSupplier.Location = new Point(596, 796);
-            btnDisplayProductSupplier.Margin = new Padding(6);
+            btnDisplayProductSupplier.Location = new Point(585, 381);
             btnDisplayProductSupplier.Name = "btnDisplayProductSupplier";
-            btnDisplayProductSupplier.Size = new Size(325, 92);
+            btnDisplayProductSupplier.Size = new Size(175, 43);
             btnDisplayProductSupplier.TabIndex = 0;
             btnDisplayProductSupplier.Text = "Display Product Information";
             btnDisplayProductSupplier.UseVisualStyleBackColor = true;
@@ -47,30 +47,38 @@
             // lblProductId
             // 
             lblProductId.AutoSize = true;
-            lblProductId.Location = new Point(22, 19);
-            lblProductId.Margin = new Padding(6, 0, 6, 0);
+            lblProductId.Location = new Point(12, 9);
             lblProductId.Name = "lblProductId";
-            lblProductId.Size = new Size(131, 32);
+            lblProductId.Size = new Size(66, 15);
             lblProductId.TabIndex = 1;
             lblProductId.Text = "Product ID:";
             // 
             // txtProductId
             // 
-            txtProductId.Location = new Point(156, 13);
-            txtProductId.Margin = new Padding(6);
+            txtProductId.Location = new Point(84, 6);
             txtProductId.Name = "txtProductId";
-            txtProductId.Size = new Size(505, 39);
+            txtProductId.Size = new Size(274, 23);
             txtProductId.TabIndex = 2;
+            // 
+            // btnBackDisplayProduct
+            // 
+            btnBackDisplayProduct.Location = new Point(43, 381);
+            btnBackDisplayProduct.Name = "btnBackDisplayProduct";
+            btnBackDisplayProduct.Size = new Size(175, 43);
+            btnBackDisplayProduct.TabIndex = 3;
+            btnBackDisplayProduct.Text = "Back";
+            btnBackDisplayProduct.UseVisualStyleBackColor = true;
+            btnBackDisplayProduct.Click += btnBackDisplayProduct_Click;
             // 
             // DisplayProductForm
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1486, 960);
+            ClientSize = new Size(800, 450);
+            Controls.Add(btnBackDisplayProduct);
             Controls.Add(txtProductId);
             Controls.Add(lblProductId);
             Controls.Add(btnDisplayProductSupplier);
-            Margin = new Padding(6);
             Name = "DisplayProductForm";
             Text = "DisplayProductForm";
             FormClosed += DisplayProductForm_FormClosed;
@@ -84,5 +92,6 @@
         private Button btnDisplayProductSupplier;
         private Label lblProductId;
         private TextBox txtProductId;
+        private Button btnBackDisplayProduct;
     }
 }

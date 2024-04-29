@@ -22,27 +22,27 @@ namespace OfficeSuppliesManagement
 
         private void btnAddNewProduct_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtDescription.Text) ||
-                string.IsNullOrEmpty(txtPrice.Text) || string.IsNullOrEmpty(txtQuantity.Text) ||
-                string.IsNullOrEmpty(txtCategoryId.Text))
+            if (string.IsNullOrEmpty(txtName.Text.Trim()) || string.IsNullOrEmpty(txtDescription.Text.Trim()) ||
+                string.IsNullOrEmpty(txtPrice.Text.Trim()) || string.IsNullOrEmpty(txtQuantity.Text.Trim()) ||
+                string.IsNullOrEmpty(txtCategoryId.Text.Trim()))
             {
                 MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (!decimal.TryParse(txtPrice.Text, out decimal price))
+            if (!decimal.TryParse(txtPrice.Text.Trim(), out decimal price) || price <= 0)
             {
                 MessageBox.Show("Please enter a valid price.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (!int.TryParse(txtQuantity.Text, out int quantity) || quantity < 0)
+            if (!int.TryParse(txtQuantity.Text.Trim(), out int quantity) || quantity <= 0)
             {
                 MessageBox.Show("Please enter a valid quantity.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (!int.TryParse(txtCategoryId.Text, out int categoryId) || categoryId < 0)
+            if (!int.TryParse(txtCategoryId.Text.Trim(), out int categoryId) || categoryId <= 0)
             {
                 MessageBox.Show("Please enter a valid category ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -56,13 +56,22 @@ namespace OfficeSuppliesManagement
                 {
                     //Need to add text box controls for the underlined
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("_name", txtName.Text);
-                    cmd.Parameters.AddWithValue("_description", txtDescription.Text);
-                    cmd.Parameters.AddWithValue("_price", decimal.Parse(txtPrice.Text));
-                    cmd.Parameters.AddWithValue("_quantity", int.Parse(txtQuantity.Text));
-                    cmd.Parameters.AddWithValue("_categoryId", int.Parse(txtCategoryId.Text));
+                    cmd.Parameters.AddWithValue("_name", txtName.Text.Trim());
+                    cmd.Parameters.AddWithValue("_description", txtDescription.Text.Trim());
+                    cmd.Parameters.AddWithValue("_price", decimal.Parse(txtPrice.Text.Trim()));
+                    cmd.Parameters.AddWithValue("_quantity", int.Parse(txtQuantity.Text.Trim()));
+                    cmd.Parameters.AddWithValue("_categoryId", int.Parse(txtCategoryId.Text.Trim()));
                     conn.Open();
                     cmd.ExecuteNonQuery();
+                    conn.Close();
+
+                    //Success message and clear the text boxes
+                    MessageBox.Show("Product added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtName.Clear();
+                    txtDescription.Clear();
+                    txtPrice.Clear();
+                    txtQuantity.Clear();
+                    txtCategoryId.Clear();
                     conn.Close();
                 }
             }
@@ -81,6 +90,13 @@ namespace OfficeSuppliesManagement
             this.Visible = false;
             OfficeSuppliesManagement optionsForm = new OfficeSuppliesManagement();
             optionsForm.ShowDialog();
+        }
+
+        private void btnBackAddProduct_Click(object sender, EventArgs e)
+        {
+            this.Close();  
+            OfficeSuppliesManagement mainForm = new OfficeSuppliesManagement();
+            mainForm.Show(); 
         }
 
         public string ProductName
