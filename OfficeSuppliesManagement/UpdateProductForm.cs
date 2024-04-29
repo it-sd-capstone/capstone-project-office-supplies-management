@@ -21,27 +21,27 @@ namespace OfficeSuppliesManagement
 
         private void updateButton_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtName.Text) || string.IsNullOrEmpty(txtDescription.Text) ||
-                string.IsNullOrEmpty(txtPrice.Text) || string.IsNullOrEmpty(txtQuantity.Text) ||
-                string.IsNullOrEmpty(txtCategoryId.Text))
+            if (string.IsNullOrEmpty(txtName.Text.Trim()) || string.IsNullOrEmpty(txtDescription.Text.Trim()) ||
+                string.IsNullOrEmpty(txtPrice.Text.Trim()) || string.IsNullOrEmpty(txtQuantity.Text.Trim()) ||
+                string.IsNullOrEmpty(txtCategoryId.Text.Trim()))
             {
                 MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (!decimal.TryParse(txtPrice.Text, out decimal price))
+            if (!decimal.TryParse(txtPrice.Text.Trim(), out decimal price) || price <= 0)
             {
                 MessageBox.Show("Please enter a valid price.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (!int.TryParse(txtQuantity.Text, out int quantity) || quantity < 0)
+            if (!int.TryParse(txtQuantity.Text.Trim(), out int quantity) || quantity <= 0)
             {
                 MessageBox.Show("Please enter a valid quantity.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (!int.TryParse(txtCategoryId.Text, out int categoryId) || categoryId < 0)
+            if (!int.TryParse(txtCategoryId.Text.Trim(), out int categoryId) || categoryId <= 0)
             {
                 MessageBox.Show("Please enter a valid category ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

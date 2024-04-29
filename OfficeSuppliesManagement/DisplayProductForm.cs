@@ -20,13 +20,13 @@ namespace OfficeSuppliesManagement
 
         private void btnDisplayProductSupplier_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtProductId.Text))
+            if (string.IsNullOrEmpty(txtProductId.Text.Trim()))
             {
                 MessageBox.Show("Please enter a product ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            if (!int.TryParse(txtProductId.Text, out int productId) || productId < 0)
+            if (!int.TryParse(txtProductId.Text.Trim(), out int productId) || productId <= 0)
             {
                 MessageBox.Show("Please enter a valid product ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
