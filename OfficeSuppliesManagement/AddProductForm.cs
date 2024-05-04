@@ -83,6 +83,22 @@ namespace OfficeSuppliesManagement
             this.MaximizeBox = false;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.BackColor = Color.LightGray;
+
+            categoryListBox.Items.Clear();
+
+            // Populate the ListBox
+            var dao = new DAO();
+            string sql = "SELECT categoryId, categoryName FROM categories;";
+            var conn = new MySqlConnection(dao.ConnStr);
+            var cmd = new MySqlCommand(sql, conn);
+            var da = new MySqlDataAdapter(cmd);
+            var dt = new DataTable();
+            da.Fill(dt);
+            categoryListBox.DataSource = dt;
+            categoryListBox.DisplayMember = "categoryName";
+            categoryListBox.ValueMember = "categoryId";
+
+            lblCategoryDescIdNum.Text = categoryListBox.SelectedValue.ToString();
         }
 
         private void AddProductForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -94,9 +110,33 @@ namespace OfficeSuppliesManagement
 
         private void btnBackAddProduct_Click(object sender, EventArgs e)
         {
-            this.Close();  
+            this.Close();
             OfficeSuppliesManagement mainForm = new OfficeSuppliesManagement();
-            mainForm.Show(); 
+            mainForm.Show();
+        }
+
+        private void categoryListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lblCategoryDescIdNum.Text = categoryListBox.SelectedValue.ToString();
+        }
+
+        private void categoryListBox_DoubleClick(object sender, EventArgs e)
+        {
+            var dao = new DAO();
+            string sql = $"SELECT description FROM categories WHERE categoryId = {categoryListBox.SelectedValue}";
+            var conn = new MySqlConnection(dao.ConnStr);
+            var cmd = new MySqlCommand(sql, conn);
+
+            conn.Open();
+            string? description = cmd.ExecuteScalar().ToString();
+            conn.Close();
+
+            if (description == "")
+            {
+                description = "(No Description Provided)";
+            }
+
+            MessageBox.Show(description, "Description", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

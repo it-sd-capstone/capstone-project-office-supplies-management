@@ -42,6 +42,10 @@
             lblProductId = new Label();
             txtProductId = new TextBox();
             btnBackAddProduct = new Button();
+            lblCategory = new Label();
+            categoryListBox = new ListBox();
+            lblCategoryDescId = new Label();
+            lblCategoryDescIdNum = new Label();
             SuspendLayout();
             // 
             // btnAddNewProduct
@@ -163,11 +167,55 @@
             btnBackAddProduct.UseVisualStyleBackColor = true;
             btnBackAddProduct.Click += btnBackAddProduct_Click;
             // 
+            // lblCategory
+            // 
+            lblCategory.AutoSize = true;
+            lblCategory.Location = new Point(448, 11);
+            lblCategory.Name = "lblCategory";
+            lblCategory.Size = new Size(185, 30);
+            lblCategory.TabIndex = 14;
+            lblCategory.Text = "Select a category:\r\n(Double-click to view description)";
+            // 
+            // categoryListBox
+            // 
+            categoryListBox.FormattingEnabled = true;
+            categoryListBox.ItemHeight = 15;
+            categoryListBox.Location = new Point(448, 44);
+            categoryListBox.Name = "categoryListBox";
+            categoryListBox.Size = new Size(348, 274);
+            categoryListBox.TabIndex = 15;
+            categoryListBox.SelectedIndexChanged += categoryListBox_SelectedIndexChanged;
+            categoryListBox.DoubleClick += categoryListBox_DoubleClick;
+            // 
+            // lblCategoryDescId
+            // 
+            lblCategoryDescId.AutoSize = true;
+            lblCategoryDescId.ForeColor = Color.Red;
+            lblCategoryDescId.Location = new Point(448, 329);
+            lblCategoryDescId.Name = "lblCategoryDescId";
+            lblCategoryDescId.Size = new Size(21, 15);
+            lblCategoryDescId.TabIndex = 16;
+            lblCategoryDescId.Text = "ID:";
+            // 
+            // lblCategoryDescIdNum
+            // 
+            lblCategoryDescIdNum.AutoSize = true;
+            lblCategoryDescIdNum.ForeColor = Color.Red;
+            lblCategoryDescIdNum.Location = new Point(475, 329);
+            lblCategoryDescIdNum.Name = "lblCategoryDescIdNum";
+            lblCategoryDescIdNum.Size = new Size(14, 15);
+            lblCategoryDescIdNum.TabIndex = 17;
+            lblCategoryDescIdNum.Text = "#";
+            // 
             // AddProductForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(433, 405);
+            ClientSize = new Size(817, 405);
+            Controls.Add(lblCategoryDescIdNum);
+            Controls.Add(lblCategoryDescId);
+            Controls.Add(categoryListBox);
+            Controls.Add(lblCategory);
             Controls.Add(btnBackAddProduct);
             Controls.Add(txtProductId);
             Controls.Add(lblProductId);
@@ -205,5 +253,9 @@
         public TextBox txtPrice;
         public TextBox txtQuantity;
         public TextBox txtCategoryId;
+        private Label lblCategory;
+        private ListBox categoryListBox;
+        private Label lblCategoryDescId;
+        private Label lblCategoryDescIdNum;
     }
 }
