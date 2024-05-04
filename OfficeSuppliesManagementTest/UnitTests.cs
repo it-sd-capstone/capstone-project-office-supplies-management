@@ -30,10 +30,10 @@ namespace OfficeSuppliesManagementTest
         public void UpdateButton_Click_UpdatesProduct()
         {
             // Arrange
-            _form.ProductName = "Test Product";
-            _form.ProductDescription = "This is a test product.";
-            _form.ProductPrice = "10.99";
-            _form.ProductCategoryId = "1";
+            _form.txtName.Text = "Test Product";
+            _form.txtDescription.Text = "This is a test product.";
+            _form.txtPrice.Text = "10.99";
+            _form.txtQuantity.Text = "1";
             _form.btnUpdateProduct.PerformClick();
 
             // Assert
@@ -73,11 +73,11 @@ namespace OfficeSuppliesManagementTest
         public void AddNewProductButton_Click_AddsNewProduct()
         {
             // Arrange
-            _form.ProductName = "Test Product";
-            _form.ProductDescription = "This is a test product.";
-            _form.ProductPrice = "10.99";
-            _form.ProductQuantity = "100";
-            _form.ProductCategoryId = "1";
+            _form.txtName.Text = "Test Product";
+            _form.txtDescription.Text = "This is a test product.";
+            _form.txtPrice.Text = "10.99";
+            _form.txtQuantity.Text = "100";
+            _form.txtCategoryId.Text = "1";
             _form.btnAddNewProduct.PerformClick();
 
             // Assert

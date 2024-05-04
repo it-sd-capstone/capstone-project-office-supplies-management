@@ -19,6 +19,9 @@ namespace OfficeSuppliesManagement
             InitializeComponent();
         }
 
+        private Product? product;
+        
+
         /*
         Changed some of the code below so that the user can specify which product to update using the ProductID.
         Next week I'll work on the user interface to actually display all of the products so that the user can see
@@ -93,36 +96,6 @@ namespace OfficeSuppliesManagement
             {
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        public string ProductName
-        {
-            get { return txtName.Text; }
-            set { txtName.Text = value; }
-        }
-
-        public string ProductDescription
-        {
-            get { return txtDescription.Text; }
-            set { txtDescription.Text = value; }
-        }
-
-        public string ProductPrice
-        {
-            get { return txtPrice.Text; }
-            set { txtPrice.Text = value; }
-        }
-
-        public string ProductQuantity
-        {
-            get { return txtQuantity.Text; }
-            set { txtQuantity.Text = value; }
-        }
-
-        public string ProductCategoryId
-        {
-            get { return txtCategoryId.Text; }
-            set { txtCategoryId.Text = value; }
         }
 
         private void UpdateProductForm_Load(object sender, EventArgs e)

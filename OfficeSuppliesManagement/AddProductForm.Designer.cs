@@ -196,14 +196,14 @@
         private Label lblPrice;
         private Label lblQuantity;
         private Label lblCategoryId;
-        private TextBox txtName;
-        private TextBox txtDescription;
-        private TextBox txtPrice;
-        private TextBox txtQuantity;
-        private TextBox txtCategoryId;
         private Label lblProductId;
         private TextBox txtProductId;
         public Button btnAddNewProduct;
         private Button btnBackAddProduct;
+        public TextBox txtName;
+        public TextBox txtDescription;
+        public TextBox txtPrice;
+        public TextBox txtQuantity;
+        public TextBox txtCategoryId;
     }
 }
