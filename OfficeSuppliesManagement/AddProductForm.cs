@@ -48,32 +48,40 @@ namespace OfficeSuppliesManagement
                 return;
             }
 
-            DAO dao = new DAO();
-            using (var conn = new MySqlConnection(dao.ConnStr))
+            try
             {
-                // Calls AddNewProduct SP to add a new product
-                using (var cmd = new MySqlCommand("AddNewProduct", conn))
-                {
-                    //Need to add text box controls for the underlined
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("_name", txtName.Text.Trim());
-                    cmd.Parameters.AddWithValue("_description", txtDescription.Text.Trim());
-                    cmd.Parameters.AddWithValue("_price", decimal.Parse(txtPrice.Text.Trim()));
-                    cmd.Parameters.AddWithValue("_quantity", int.Parse(txtQuantity.Text.Trim()));
-                    cmd.Parameters.AddWithValue("_categoryId", int.Parse(txtCategoryId.Text.Trim()));
-                    conn.Open();
-                    cmd.ExecuteNonQuery();
-                    conn.Close();
 
-                    //Success message and clear the text boxes
-                    MessageBox.Show("Product added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtName.Clear();
-                    txtDescription.Clear();
-                    txtPrice.Clear();
-                    txtQuantity.Clear();
-                    txtCategoryId.Clear();
-                    conn.Close();
+                DAO dao = new DAO();
+                using (var conn = new MySqlConnection(dao.ConnStr))
+                {
+                    // Calls AddNewProduct SP to add a new product
+                    using (var cmd = new MySqlCommand("AddNewProduct", conn))
+                    {
+                        //Need to add text box controls for the underlined
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("_name", txtName.Text.Trim());
+                        cmd.Parameters.AddWithValue("_description", txtDescription.Text.Trim());
+                        cmd.Parameters.AddWithValue("_price", decimal.Parse(txtPrice.Text.Trim()));
+                        cmd.Parameters.AddWithValue("_quantity", int.Parse(txtQuantity.Text.Trim()));
+                        cmd.Parameters.AddWithValue("_categoryId", int.Parse(txtCategoryId.Text.Trim()));
+                        conn.Open();
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+
+                        //Success message and clear the text boxes
+                        MessageBox.Show("Product added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtName.Clear();
+                        txtDescription.Clear();
+                        txtPrice.Clear();
+                        txtQuantity.Clear();
+                        txtCategoryId.Clear();
+                        conn.Close();
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
