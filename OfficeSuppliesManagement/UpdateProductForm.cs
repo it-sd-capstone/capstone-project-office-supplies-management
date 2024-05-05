@@ -19,8 +19,16 @@ namespace OfficeSuppliesManagement
             InitializeComponent();
         }
 
-        private Product? product;
-        
+        //Adding for tests
+        public void SetProductDetails(int productId, string name, string description, decimal price, int quantity, int categoryId)
+        {
+            txtProductId.Text = productId.ToString();
+            txtName.Text = name;
+            txtDescription.Text = description;
+            txtPrice.Text = price.ToString();
+            txtQuantity.Text = quantity.ToString();
+            txtCategoryId.Text = categoryId.ToString();
+        }
 
         /*
         Changed some of the code below so that the user can specify which product to update using the ProductID.
