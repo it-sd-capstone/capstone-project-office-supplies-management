@@ -39,7 +39,7 @@ namespace OfficeSuppliesManagement
             {
                 using (var conn = new MySqlConnection(dao.ConnStr))
                 {
-                    using (var cmd = new MySqlCommand("DisplayProductSupplier", conn))
+                    using (var cmd = new MySqlCommand("DisplayProductDetails", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("_productId", productId);
