@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\codyh\\OneDrive\\Desktop\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj": {}
+    "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\codyh\\OneDrive\\Desktop\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj": {
+    "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\codyh\\OneDrive\\Desktop\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj",
+        "projectUniqueName": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj",
         "projectName": "OfficeSuppliesManagement",
-        "projectPath": "C:\\Users\\codyh\\OneDrive\\Desktop\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj",
-        "packagesPath": "C:\\Users\\codyh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\codyh\\OneDrive\\Desktop\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\obj\\",
+        "projectPath": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj",
+        "packagesPath": "C:\\Users\\gabes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\codyh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gabes\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -68,6 +68,10 @@
             "NUnit3TestAdapter": {
               "target": "Package",
               "version": "[4.5.0, )"
+            },
+            "itextsharp": {
+              "target": "Package",
+              "version": "[5.5.13.3, )"
             }
           },
           "imports": [

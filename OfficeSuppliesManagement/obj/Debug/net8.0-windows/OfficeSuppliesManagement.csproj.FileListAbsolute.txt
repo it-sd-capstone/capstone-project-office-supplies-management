@@ -236,3 +236,5 @@ C:\Users\gabes\OneDrive - Chippewa Valley Technical College\IT-DeveloperCapstone
 C:\Users\gabes\OneDrive - Chippewa Valley Technical College\IT-DeveloperCapstone\capstone-project-office-supplies-management\OfficeSuppliesManagement\bin\Debug\net8.0-windows\Moq.dll
 C:\Users\gabes\OneDrive - Chippewa Valley Technical College\IT-DeveloperCapstone\capstone-project-office-supplies-management\OfficeSuppliesManagement\bin\Debug\net8.0-windows\nunit.framework.dll
 C:\Users\gabes\OneDrive - Chippewa Valley Technical College\IT-DeveloperCapstone\capstone-project-office-supplies-management\OfficeSuppliesManagement\bin\Debug\net8.0-windows\nunit.framework.legacy.dll
+C:\Users\gabes\OneDrive - Chippewa Valley Technical College\IT-DeveloperCapstone\capstone-project-office-supplies-management\OfficeSuppliesManagement\bin\Debug\net8.0-windows\BouncyCastle.Crypto.dll
+C:\Users\gabes\OneDrive - Chippewa Valley Technical College\IT-DeveloperCapstone\capstone-project-office-supplies-management\OfficeSuppliesManagement\bin\Debug\net8.0-windows\itextsharp.dll

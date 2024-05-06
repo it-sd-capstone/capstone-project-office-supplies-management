@@ -46,6 +46,7 @@
             categoryListBox = new ListBox();
             lblCategoryDescId = new Label();
             lblCategoryDescIdNum = new Label();
+            lblSuccessMessage = new Label();
             SuspendLayout();
             // 
             // btnAddNewProduct
@@ -207,11 +208,22 @@
             lblCategoryDescIdNum.TabIndex = 17;
             lblCategoryDescIdNum.Text = "#";
             // 
+            // lblSuccessMessage
+            // 
+            lblSuccessMessage.AutoSize = true;
+            lblSuccessMessage.ForeColor = Color.Green;
+            lblSuccessMessage.Location = new Point(263, 304);
+            lblSuccessMessage.Name = "lblSuccessMessage";
+            lblSuccessMessage.Size = new Size(154, 15);
+            lblSuccessMessage.TabIndex = 18;
+            lblSuccessMessage.Text = "Product added successfully!";
+            // 
             // AddProductForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(817, 405);
+            Controls.Add(lblSuccessMessage);
             Controls.Add(lblCategoryDescIdNum);
             Controls.Add(lblCategoryDescId);
             Controls.Add(categoryListBox);
@@ -231,7 +243,7 @@
             Controls.Add(lblName);
             Controls.Add(btnAddNewProduct);
             Name = "AddProductForm";
-            Text = "AddProductForm";
+            Text = "Add Product";
             FormClosed += AddProductForm_FormClosed;
             Load += AddProductForm_Load;
             ResumeLayout(false);
@@ -257,5 +269,6 @@
         private ListBox categoryListBox;
         private Label lblCategoryDescId;
         private Label lblCategoryDescIdNum;
+        private Label lblSuccessMessage;
     }
 }

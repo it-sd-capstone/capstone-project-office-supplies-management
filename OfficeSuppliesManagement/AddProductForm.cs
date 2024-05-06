@@ -21,23 +21,10 @@ namespace OfficeSuppliesManagement
         public string ProductQuantity { get; set; }
         public string ProductCategoryId { get; set; }
         
-        private Label lblSuccessMessage;
-
-        private ComboBox cbCategory;
 
         public AddProductForm()
         {
             InitializeComponent();
-
-            // Initialize success message label
-            lblSuccessMessage = new Label();
-            lblSuccessMessage.ForeColor = Color.Green;
-            lblSuccessMessage.Visible = false; // Hide it initially
-            this.Controls.Add(lblSuccessMessage);
-
-            // Initialize category combo box
-            cbCategory = new ComboBox();
-            this.Controls.Add(cbCategory); // Add it to the form
         }
 
 
@@ -98,7 +85,6 @@ namespace OfficeSuppliesManagement
                         conn.Close();
                     }
                     // Show success message in the label instead of a message box
-                    lblSuccessMessage.Text = "Product added successfully!";
                     lblSuccessMessage.Visible = true;
                 }
             }
@@ -114,6 +100,7 @@ namespace OfficeSuppliesManagement
             this.MaximizeBox = false;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.BackColor = Color.LightGray;
+            lblSuccessMessage.Visible = false; // Hide it initially
 
             categoryListBox.Items.Clear();
 
@@ -125,11 +112,11 @@ namespace OfficeSuppliesManagement
             var da = new MySqlDataAdapter(cmd);
             var dt = new DataTable();
             da.Fill(dt);
-            cbCategory.DataSource = dt;
-            cbCategory.DisplayMember = "categoryName";
-            cbCategory.ValueMember = "categoryId";
+            categoryListBox.DataSource = dt;
+            categoryListBox.DisplayMember = "categoryName";
+            categoryListBox.ValueMember = "categoryId";
 
-            lblCategoryDescIdNum.Text = cbCategory.SelectedValue.ToString();
+            lblCategoryDescIdNum.Text = categoryListBox.SelectedValue.ToString();
         }
 
         private void AddProductForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -148,7 +135,7 @@ namespace OfficeSuppliesManagement
 
         private void categoryListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lblCategoryDescIdNum.Text = cbCategory.SelectedValue.ToString();
+            lblCategoryDescIdNum.Text = categoryListBox.SelectedValue.ToString();
         }
 
         private void categoryListBox_DoubleClick(object sender, EventArgs e)

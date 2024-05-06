@@ -103,7 +103,7 @@
             Controls.Add(lblProductId);
             Controls.Add(btnDisplayProductSupplier);
             Name = "DisplayProductForm";
-            Text = "DisplayProductForm";
+            Text = "Display Product";
             FormClosed += DisplayProductForm_FormClosed;
             Load += DisplayProductForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgv).EndInit();

@@ -42,6 +42,11 @@
             txtQuantity = new TextBox();
             txtCategoryId = new TextBox();
             btnBackUpdateProduct = new Button();
+            categoryListBox = new ListBox();
+            lblCategory = new Label();
+            lblCategoryDescId = new Label();
+            lblCategoryDescIdNum = new Label();
+            lblSuccessMessage = new Label();
             SuspendLayout();
             // 
             // btnUpdateProduct
@@ -160,11 +165,66 @@
             btnBackUpdateProduct.UseVisualStyleBackColor = true;
             btnBackUpdateProduct.Click += btnBackUpdateProduct_Click;
             // 
+            // categoryListBox
+            // 
+            categoryListBox.FormattingEnabled = true;
+            categoryListBox.ItemHeight = 15;
+            categoryListBox.Location = new Point(452, 42);
+            categoryListBox.Name = "categoryListBox";
+            categoryListBox.Size = new Size(348, 274);
+            categoryListBox.TabIndex = 16;
+            categoryListBox.SelectedIndexChanged += categoryListBox_SelectedIndexChanged;
+            categoryListBox.DoubleClick += categoryListBox_DoubleClick;
+            // 
+            // lblCategory
+            // 
+            lblCategory.AutoSize = true;
+            lblCategory.Location = new Point(452, 9);
+            lblCategory.Name = "lblCategory";
+            lblCategory.Size = new Size(185, 30);
+            lblCategory.TabIndex = 17;
+            lblCategory.Text = "Select a category:\r\n(Double-click to view description)";
+            // 
+            // lblCategoryDescId
+            // 
+            lblCategoryDescId.AutoSize = true;
+            lblCategoryDescId.ForeColor = Color.Red;
+            lblCategoryDescId.Location = new Point(452, 329);
+            lblCategoryDescId.Name = "lblCategoryDescId";
+            lblCategoryDescId.Size = new Size(21, 15);
+            lblCategoryDescId.TabIndex = 18;
+            lblCategoryDescId.Text = "ID:";
+            // 
+            // lblCategoryDescIdNum
+            // 
+            lblCategoryDescIdNum.AutoSize = true;
+            lblCategoryDescIdNum.ForeColor = Color.Red;
+            lblCategoryDescIdNum.Location = new Point(479, 329);
+            lblCategoryDescIdNum.Name = "lblCategoryDescIdNum";
+            lblCategoryDescIdNum.Size = new Size(14, 15);
+            lblCategoryDescIdNum.TabIndex = 19;
+            lblCategoryDescIdNum.Text = "#";
+            // 
+            // lblSuccessMessage
+            // 
+            lblSuccessMessage.AutoSize = true;
+            lblSuccessMessage.ForeColor = Color.Green;
+            lblSuccessMessage.Location = new Point(254, 360);
+            lblSuccessMessage.Name = "lblSuccessMessage";
+            lblSuccessMessage.Size = new Size(154, 15);
+            lblSuccessMessage.TabIndex = 20;
+            lblSuccessMessage.Text = "Product added successfully!";
+            // 
             // UpdateProductForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(430, 450);
+            ClientSize = new Size(839, 450);
+            Controls.Add(lblSuccessMessage);
+            Controls.Add(lblCategoryDescIdNum);
+            Controls.Add(lblCategoryDescId);
+            Controls.Add(lblCategory);
+            Controls.Add(categoryListBox);
             Controls.Add(btnBackUpdateProduct);
             Controls.Add(txtCategoryId);
             Controls.Add(txtQuantity);
@@ -202,5 +262,10 @@
         public TextBox txtPrice;
         public TextBox txtQuantity;
         public TextBox txtCategoryId;
+        private ListBox categoryListBox;
+        private Label lblCategory;
+        private Label lblCategoryDescId;
+        private Label lblCategoryDescIdNum;
+        private Label lblSuccessMessage;
     }
 }
