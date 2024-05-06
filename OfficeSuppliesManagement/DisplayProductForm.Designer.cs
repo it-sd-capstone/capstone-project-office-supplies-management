@@ -36,9 +36,9 @@
             // 
             // btnDisplayProductSupplier
             // 
-            btnDisplayProductSupplier.Location = new Point(585, 381);
+            btnDisplayProductSupplier.Location = new Point(585, 6);
             btnDisplayProductSupplier.Name = "btnDisplayProductSupplier";
-            btnDisplayProductSupplier.Size = new Size(175, 43);
+            btnDisplayProductSupplier.Size = new Size(175, 31);
             btnDisplayProductSupplier.TabIndex = 0;
             btnDisplayProductSupplier.Text = "Display Product Information";
             btnDisplayProductSupplier.UseVisualStyleBackColor = true;
