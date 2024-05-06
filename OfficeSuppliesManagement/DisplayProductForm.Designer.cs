@@ -33,6 +33,7 @@
             txtProductId = new TextBox();
             btnBackDisplayProduct = new Button();
             dgv = new DataGridView();
+            btnViewAllProducts = new Button();
             ((System.ComponentModel.ISupportInitialize)dgv).BeginInit();
             SuspendLayout();
             // 
@@ -64,7 +65,7 @@
             // 
             // btnBackDisplayProduct
             // 
-            btnBackDisplayProduct.Location = new Point(43, 381);
+            btnBackDisplayProduct.Location = new Point(84, 380);
             btnBackDisplayProduct.Name = "btnBackDisplayProduct";
             btnBackDisplayProduct.Size = new Size(175, 43);
             btnBackDisplayProduct.TabIndex = 3;
@@ -80,11 +81,22 @@
             dgv.Size = new Size(676, 294);
             dgv.TabIndex = 4;
             // 
+            // btnViewAllProducts
+            // 
+            btnViewAllProducts.Location = new Point(585, 380);
+            btnViewAllProducts.Name = "btnViewAllProducts";
+            btnViewAllProducts.Size = new Size(175, 43);
+            btnViewAllProducts.TabIndex = 5;
+            btnViewAllProducts.Text = "Products to PDF";
+            btnViewAllProducts.UseVisualStyleBackColor = true;
+            btnViewAllProducts.Click += btnViewAllProducts_Click;
+            // 
             // DisplayProductForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnViewAllProducts);
             Controls.Add(dgv);
             Controls.Add(btnBackDisplayProduct);
             Controls.Add(txtProductId);
@@ -106,5 +118,6 @@
         private TextBox txtProductId;
         private Button btnBackDisplayProduct;
         private DataGridView dgv;
+        private Button btnViewAllProducts;
     }
 }
