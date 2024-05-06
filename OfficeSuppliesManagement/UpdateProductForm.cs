@@ -106,36 +106,6 @@ namespace OfficeSuppliesManagement
             }
         }
 
-        public string ProductName
-        {
-            get { return txtName.Text; }
-            set { txtName.Text = value; }
-        }
-
-        public string ProductDescription
-        {
-            get { return txtDescription.Text; }
-            set { txtDescription.Text = value; }
-        }
-
-        public string ProductPrice
-        {
-            get { return txtPrice.Text; }
-            set { txtPrice.Text = value; }
-        }
-
-        public string ProductQuantity
-        {
-            get { return txtQuantity.Text; }
-            set { txtQuantity.Text = value; }
-        }
-
-        public string ProductCategoryId
-        {
-            get { return txtCategoryId.Text; }
-            set { txtCategoryId.Text = value; }
-        }
-
         private void UpdateProductForm_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.FixedDialog;

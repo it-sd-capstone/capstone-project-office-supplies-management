@@ -195,12 +195,12 @@
         private Label lblQuantity;
         private Label lblCategoryId;
         private TextBox txtProductId;
-        private TextBox txtDescription;
-        private TextBox txtName;
-        private TextBox txtPrice;
-        private TextBox txtQuantity;
-        private TextBox txtCategoryId;
         public Button btnUpdateProduct;
         private Button btnBackUpdateProduct;
+        public TextBox txtDescription;
+        public TextBox txtName;
+        public TextBox txtPrice;
+        public TextBox txtQuantity;
+        public TextBox txtCategoryId;
     }
 }

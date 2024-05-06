@@ -91,6 +91,22 @@ namespace OfficeSuppliesManagement
             this.MaximizeBox = false;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.BackColor = Color.LightGray;
+
+            categoryListBox.Items.Clear();
+
+            // Populate the ListBox
+            var dao = new DAO();
+            string sql = "SELECT categoryId, categoryName FROM categories;";
+            var conn = new MySqlConnection(dao.ConnStr);
+            var cmd = new MySqlCommand(sql, conn);
+            var da = new MySqlDataAdapter(cmd);
+            var dt = new DataTable();
+            da.Fill(dt);
+            categoryListBox.DataSource = dt;
+            categoryListBox.DisplayMember = "categoryName";
+            categoryListBox.ValueMember = "categoryId";
+
+            lblCategoryDescIdNum.Text = categoryListBox.SelectedValue.ToString();
         }
 
         private void AddProductForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -102,39 +118,33 @@ namespace OfficeSuppliesManagement
 
         private void btnBackAddProduct_Click(object sender, EventArgs e)
         {
-            this.Close();  
+            this.Close();
             OfficeSuppliesManagement mainForm = new OfficeSuppliesManagement();
-            mainForm.Show(); 
+            mainForm.Show();
         }
 
-        public string ProductName
+        private void categoryListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            get { return txtName.Text; }
-            set { txtName.Text = value; }
+            lblCategoryDescIdNum.Text = categoryListBox.SelectedValue.ToString();
         }
 
-        public string ProductDescription
+        private void categoryListBox_DoubleClick(object sender, EventArgs e)
         {
-            get { return txtDescription.Text; }
-            set { txtDescription.Text = value; }
-        }
+            var dao = new DAO();
+            string sql = $"SELECT description FROM categories WHERE categoryId = {categoryListBox.SelectedValue}";
+            var conn = new MySqlConnection(dao.ConnStr);
+            var cmd = new MySqlCommand(sql, conn);
 
-        public string ProductPrice
-        {
-            get { return txtPrice.Text; }
-            set { txtPrice.Text = value; }
-        }
+            conn.Open();
+            string? description = cmd.ExecuteScalar().ToString();
+            conn.Close();
 
-        public string ProductQuantity
-        {
-            get { return txtQuantity.Text; }
-            set { txtQuantity.Text = value; }
-        }
+            if (description == "")
+            {
+                description = "(No Description Provided)";
+            }
 
-        public string ProductCategoryId
-        {
-            get { return txtCategoryId.Text; }
-            set { txtCategoryId.Text = value; }
+            MessageBox.Show(description, "Description", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
