@@ -14,9 +14,25 @@ namespace OfficeSuppliesManagement
 {
     public partial class UpdateProductForm : Form
     {
+        // Add a label to display success message
+        private Label lblSuccessMessage;
+
+        // Change categoryListBox to ComboBox
+        private ComboBox cbCategory;
+
         public UpdateProductForm()
         {
             InitializeComponent();
+
+            // Initialize success message label
+            lblSuccessMessage = new Label();
+            lblSuccessMessage.ForeColor = Color.Green;
+            lblSuccessMessage.Visible = false; // Hide it initially
+            this.Controls.Add(lblSuccessMessage);
+
+            // Initialize category combo box
+            cbCategory = new ComboBox();
+            this.Controls.Add(cbCategory); // Add it to the form
         }
 
         //Adding for tests
@@ -90,8 +106,11 @@ namespace OfficeSuppliesManagement
                         cmd.ExecuteNonQuery();
                         conn.Close();
 
-                        //Success message and clear the text boxes
-                        MessageBox.Show("Product updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // Show success message in the label instead of a message box
+                        lblSuccessMessage.Text = "Product updated successfully!";
+                        lblSuccessMessage.Visible = true;
+
+                        //clear the text boxes
                         txtName.Clear();
                         txtDescription.Clear();
                         txtPrice.Clear();
@@ -112,6 +131,18 @@ namespace OfficeSuppliesManagement
             this.MaximizeBox = false;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.BackColor = Color.LightGray;
+
+            // Populate the ComboBox
+            var dao = new DAO();
+            string sql = "SELECT categoryId, categoryName FROM categories;";
+            var conn = new MySqlConnection(dao.ConnStr);
+            var cmd = new MySqlCommand(sql, conn);
+            var da = new MySqlDataAdapter(cmd);
+            var dt = new DataTable();
+            da.Fill(dt);
+            cbCategory.DataSource = dt;
+            cbCategory.DisplayMember = "categoryName";
+            cbCategory.ValueMember = "categoryId";
         }
 
         private void UpdateProductForm_FormClosed(object sender, FormClosedEventArgs e)

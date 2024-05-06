@@ -3277,23 +3277,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gabes\\.nuget\\packages\\": {},
+    "C:\\Users\\codyh\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj",
+      "projectUniqueName": "C:\\Users\\codyh\\OneDrive\\Desktop\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj",
       "projectName": "OfficeSuppliesManagement",
-      "projectPath": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj",
-      "packagesPath": "C:\\Users\\gabes\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gabes\\OneDrive - Chippewa Valley Technical College\\IT-DeveloperCapstone\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\obj\\",
+      "projectPath": "C:\\Users\\codyh\\OneDrive\\Desktop\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\OfficeSuppliesManagement.csproj",
+      "packagesPath": "C:\\Users\\codyh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\codyh\\OneDrive\\Desktop\\capstone-project-office-supplies-management\\OfficeSuppliesManagement\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\gabes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\codyh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

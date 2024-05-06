@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace OfficeSuppliesManagement
 {
-    internal class DAO
+    public class DAO
     {
        
         private string connStr = "server=localhost;user=root;port=3306;password=mysql";

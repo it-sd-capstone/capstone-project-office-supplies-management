@@ -15,10 +15,31 @@ namespace OfficeSuppliesManagement
 {
     public partial class AddProductForm : Form
     {
+        public string ProductName { get; set; }
+        public string ProductDescription { get; set; }
+        public string ProductPrice { get; set; }
+        public string ProductQuantity { get; set; }
+        public string ProductCategoryId { get; set; }
+        
+        private Label lblSuccessMessage;
+
+        private ComboBox cbCategory;
+
         public AddProductForm()
         {
             InitializeComponent();
+
+            // Initialize success message label
+            lblSuccessMessage = new Label();
+            lblSuccessMessage.ForeColor = Color.Green;
+            lblSuccessMessage.Visible = false; // Hide it initially
+            this.Controls.Add(lblSuccessMessage);
+
+            // Initialize category combo box
+            cbCategory = new ComboBox();
+            this.Controls.Add(cbCategory); // Add it to the form
         }
+
 
         private void btnAddNewProduct_Click(object sender, EventArgs e)
         {
@@ -68,8 +89,7 @@ namespace OfficeSuppliesManagement
                         cmd.ExecuteNonQuery();
                         conn.Close();
 
-                        //Success message and clear the text boxes
-                        MessageBox.Show("Product added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //clear the text boxes
                         txtName.Clear();
                         txtDescription.Clear();
                         txtPrice.Clear();
@@ -77,6 +97,9 @@ namespace OfficeSuppliesManagement
                         txtCategoryId.Clear();
                         conn.Close();
                     }
+                    // Show success message in the label instead of a message box
+                    lblSuccessMessage.Text = "Product added successfully!";
+                    lblSuccessMessage.Visible = true;
                 }
             }
             catch (Exception ex)
@@ -94,7 +117,7 @@ namespace OfficeSuppliesManagement
 
             categoryListBox.Items.Clear();
 
-            // Populate the ListBox
+            // Populate the ComboBox
             var dao = new DAO();
             string sql = "SELECT categoryId, categoryName FROM categories;";
             var conn = new MySqlConnection(dao.ConnStr);
@@ -102,11 +125,11 @@ namespace OfficeSuppliesManagement
             var da = new MySqlDataAdapter(cmd);
             var dt = new DataTable();
             da.Fill(dt);
-            categoryListBox.DataSource = dt;
-            categoryListBox.DisplayMember = "categoryName";
-            categoryListBox.ValueMember = "categoryId";
+            cbCategory.DataSource = dt;
+            cbCategory.DisplayMember = "categoryName";
+            cbCategory.ValueMember = "categoryId";
 
-            lblCategoryDescIdNum.Text = categoryListBox.SelectedValue.ToString();
+            lblCategoryDescIdNum.Text = cbCategory.SelectedValue.ToString();
         }
 
         private void AddProductForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -125,7 +148,7 @@ namespace OfficeSuppliesManagement
 
         private void categoryListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lblCategoryDescIdNum.Text = categoryListBox.SelectedValue.ToString();
+            lblCategoryDescIdNum.Text = cbCategory.SelectedValue.ToString();
         }
 
         private void categoryListBox_DoubleClick(object sender, EventArgs e)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OfficeSuppliesManagement
 {
-    internal class Restock
+    public class Restock
     {
         public int RestockID { get; set; }
         public int ItemId { get; set; }

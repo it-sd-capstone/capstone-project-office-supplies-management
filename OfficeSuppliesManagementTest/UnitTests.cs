@@ -106,9 +106,9 @@ namespace OfficeSuppliesManagementTest
         [SetUp]
         public void Setup()
         {
-            
+
             addProductForm = new AddProductForm();
-            addProductForm.Show(); 
+            addProductForm.Show();
         }
 
         [Test]
@@ -141,11 +141,11 @@ namespace OfficeSuppliesManagementTest
         [SetUp]
         public void Setup()
         {
-            dao = new DAO();  
-            updateProductForm = new UpdateProductForm();  
+            dao = new DAO();
+            updateProductForm = new UpdateProductForm();
             updateProductForm.Show();
 
-            
+
             updateProductForm.SetProductDetails(1, "Updated Product", "Updated description", 29.99M, 50, 2);
         }
 
@@ -163,6 +163,44 @@ namespace OfficeSuppliesManagementTest
         public void TearDown()
         {
             updateProductForm.Close();
+        }
+
+        [TestFixture]
+        class ProductTests
+        {
+            [Test]
+            public void Product_Properties_SetAndGet()
+            {
+                // Arrange
+                var product = new Product();
+
+                // Act
+                product.ProductId = 1;
+                product.Name = "Test Product";
+                product.Description = "This is a test product.";
+                product.Price = 10.99m;
+                product.Quantity = 100;
+                product.CategoryId = 1;
+            }
+        }
+
+        [TestFixture]
+        public class RestockTests
+        {
+            [Test]
+            public void Restock_Properties_SetAndGet()
+            {
+                // Arrange
+                var restock = new Restock();
+
+                // Act
+                restock.RestockID = 1;
+                restock.ItemId = 2;
+                restock.SupplierId = 3;
+                restock.Quantity = 100;
+                restock.ExpRestock = DateTime.Now;
+
+            }
         }
     }
 }
