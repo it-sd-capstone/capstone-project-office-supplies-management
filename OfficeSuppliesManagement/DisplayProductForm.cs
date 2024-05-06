@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
 namespace OfficeSuppliesManagement
 {
@@ -36,22 +39,23 @@ namespace OfficeSuppliesManagement
             {
                 using (var conn = new MySqlConnection(dao.ConnStr))
                 {
-                    // Calls DisplayProductSupplier SP to display product info
-                    using (var cmd = new MySqlCommand("DisplayProductSupplier", conn))
+                    using (var cmd = new MySqlCommand("DisplayProductDetails", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        //User would enter productID into a text box
-                        cmd.Parameters.AddWithValue("_productId", int.Parse(txtProductId.Text.Trim()));
+                        cmd.Parameters.AddWithValue("_productId", productId);
                         conn.Open();
-                        using (var reader = cmd.ExecuteReader())
+                        DataTable dt = new DataTable();
+                        using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
                         {
-                            // Process each record
-
-                            while (reader.Read())
-                            {
-                                // Process each record
-
-                            }
+                            da.Fill(dt);
+                        }
+                        if (dt.Rows.Count > 0)
+                        {
+                            dgv.DataSource = dt;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No data found for the provided ID.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         conn.Close();
                     }
@@ -81,5 +85,42 @@ namespace OfficeSuppliesManagement
             OfficeSuppliesManagement mainForm = new OfficeSuppliesManagement();
             mainForm.Show();
         }
+
+        private void btnViewAllProducts_Click(object sender, EventArgs e)
+        {
+            DAO dao = new DAO();
+            DataTable dt = dao.GetAllProductsAsDataTable();
+            string pdfPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "AllProducts.pdf");
+
+            Document document = new Document();
+            PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(pdfPath, FileMode.Create));
+            document.Open();
+
+            PdfPTable table = new PdfPTable(dt.Columns.Count);
+            table.WidthPercentage = 100;
+
+            
+            foreach (DataColumn column in dt.Columns)
+            {
+                PdfPCell cell = new PdfPCell(new Phrase(column.ColumnName));
+                cell.BackgroundColor = BaseColor.LIGHT_GRAY;
+                table.AddCell(cell);
+            }
+
+            
+            foreach (DataRow row in dt.Rows)
+            {
+                foreach (Object item in row.ItemArray)
+                {
+                    table.AddCell(new Phrase(item.ToString()));
+                }
+            }
+
+            document.Add(table);
+            document.Close();
+
+            MessageBox.Show("PDF created on your desktop.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
     }
 }

@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,5 +45,23 @@ namespace OfficeSuppliesManagement
             }
             return products;
         }
+        public DataTable GetAllProductsAsDataTable()
+        {
+            DataTable dt = new DataTable();
+            using (var conn = new MySqlConnection(connStr))
+            {
+                conn.Open();
+                string query = "SELECT * FROM Products"; 
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+            return dt;
+        }
+
     }
 }
