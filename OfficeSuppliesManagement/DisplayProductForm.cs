@@ -88,7 +88,39 @@ namespace OfficeSuppliesManagement
 
         private void btnViewAllProducts_Click(object sender, EventArgs e)
         {
+            DAO dao = new DAO();
+            DataTable dt = dao.GetAllProductsAsDataTable();
+            string pdfPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "AllProducts.pdf");
 
+            Document document = new Document();
+            PdfWriter writer = PdfWriter.GetInstance(document, new FileStream(pdfPath, FileMode.Create));
+            document.Open();
+
+            PdfPTable table = new PdfPTable(dt.Columns.Count);
+            table.WidthPercentage = 100;
+
+            
+            foreach (DataColumn column in dt.Columns)
+            {
+                PdfPCell cell = new PdfPCell(new Phrase(column.ColumnName));
+                cell.BackgroundColor = BaseColor.LIGHT_GRAY;
+                table.AddCell(cell);
+            }
+
+            
+            foreach (DataRow row in dt.Rows)
+            {
+                foreach (Object item in row.ItemArray)
+                {
+                    table.AddCell(new Phrase(item.ToString()));
+                }
+            }
+
+            document.Add(table);
+            document.Close();
+
+            MessageBox.Show("PDF created on your desktop.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
     }
 }
