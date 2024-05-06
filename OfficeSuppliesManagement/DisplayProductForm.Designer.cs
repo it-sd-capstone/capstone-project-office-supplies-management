@@ -32,6 +32,8 @@
             lblProductId = new Label();
             txtProductId = new TextBox();
             btnBackDisplayProduct = new Button();
+            dgv = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgv).BeginInit();
             SuspendLayout();
             // 
             // btnDisplayProductSupplier
@@ -70,11 +72,20 @@
             btnBackDisplayProduct.UseVisualStyleBackColor = true;
             btnBackDisplayProduct.Click += btnBackDisplayProduct_Click;
             // 
+            // dgv
+            // 
+            dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv.Location = new Point(84, 64);
+            dgv.Name = "dgv";
+            dgv.Size = new Size(676, 294);
+            dgv.TabIndex = 4;
+            // 
             // DisplayProductForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(dgv);
             Controls.Add(btnBackDisplayProduct);
             Controls.Add(txtProductId);
             Controls.Add(lblProductId);
@@ -83,6 +94,7 @@
             Text = "DisplayProductForm";
             FormClosed += DisplayProductForm_FormClosed;
             Load += DisplayProductForm_Load;
+            ((System.ComponentModel.ISupportInitialize)dgv).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -93,5 +105,6 @@
         private Label lblProductId;
         private TextBox txtProductId;
         private Button btnBackDisplayProduct;
+        private DataGridView dgv;
     }
 }

@@ -36,22 +36,23 @@ namespace OfficeSuppliesManagement
             {
                 using (var conn = new MySqlConnection(dao.ConnStr))
                 {
-                    // Calls DisplayProductSupplier SP to display product info
                     using (var cmd = new MySqlCommand("DisplayProductSupplier", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
-                        //User would enter productID into a text box
-                        cmd.Parameters.AddWithValue("_productId", int.Parse(txtProductId.Text.Trim()));
+                        cmd.Parameters.AddWithValue("_productId", productId);
                         conn.Open();
-                        using (var reader = cmd.ExecuteReader())
+                        DataTable dt = new DataTable();
+                        using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
                         {
-                            // Process each record
-
-                            while (reader.Read())
-                            {
-                                // Process each record
-
-                            }
+                            da.Fill(dt);
+                        }
+                        if (dt.Rows.Count > 0)
+                        {
+                            dgv.DataSource = dt;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No data found for the provided ID.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         conn.Close();
                     }
