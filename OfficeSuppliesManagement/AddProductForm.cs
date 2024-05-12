@@ -20,11 +20,12 @@ namespace OfficeSuppliesManagement
         public string ProductPrice { get; set; }
         public string ProductQuantity { get; set; }
         public string ProductCategoryId { get; set; }
-        
+
 
         public AddProductForm()
         {
             InitializeComponent();
+            lblCategoryDescText.MaximumSize = new Size(cbCategoryId.Width, 0);
         }
 
 
@@ -32,7 +33,7 @@ namespace OfficeSuppliesManagement
         {
             if (string.IsNullOrEmpty(txtName.Text.Trim()) || string.IsNullOrEmpty(txtDescription.Text.Trim()) ||
                 string.IsNullOrEmpty(txtPrice.Text.Trim()) || string.IsNullOrEmpty(txtQuantity.Text.Trim()) ||
-                string.IsNullOrEmpty(txtCategoryId.Text.Trim()))
+                cbCategoryId.SelectedIndex < 0)
             {
                 MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -50,9 +51,9 @@ namespace OfficeSuppliesManagement
                 return;
             }
 
-            if (!int.TryParse(txtCategoryId.Text.Trim(), out int categoryId) || categoryId <= 0)
+            if (cbCategoryId.SelectedIndex < 0)
             {
-                MessageBox.Show("Please enter a valid category ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please select a category.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -71,22 +72,23 @@ namespace OfficeSuppliesManagement
                         cmd.Parameters.AddWithValue("_description", txtDescription.Text.Trim());
                         cmd.Parameters.AddWithValue("_price", decimal.Parse(txtPrice.Text.Trim()));
                         cmd.Parameters.AddWithValue("_quantity", int.Parse(txtQuantity.Text.Trim()));
-                        cmd.Parameters.AddWithValue("_categoryId", int.Parse(txtCategoryId.Text.Trim()));
+                        cmd.Parameters.AddWithValue("_categoryId", int.Parse(cbCategoryId.SelectedValue.ToString()));
                         conn.Open();
                         cmd.ExecuteNonQuery();
                         conn.Close();
 
                         //clear the text boxes
-                        txtName.Clear();
-                        txtDescription.Clear();
-                        txtPrice.Clear();
-                        txtQuantity.Clear();
-                        txtCategoryId.Clear();
+                        clearTxts();
+
                         conn.Close();
                     }
+
                     // Show success message in the label instead of a message box
                     lblSuccessMessage.Visible = true;
                 }
+
+                // Clear the newly entered data.
+                clearTxts();
             }
             catch (Exception ex)
             {
@@ -96,15 +98,9 @@ namespace OfficeSuppliesManagement
 
         private void AddProductForm_Load(object sender, EventArgs e)
         {
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.BackColor = Color.LightGray;
             lblSuccessMessage.Visible = false; // Hide it initially
 
-            categoryListBox.Items.Clear();
-
-            // Populate the ComboBox
+            // Initialize a database connection.
             var dao = new DAO();
             string sql = "SELECT categoryId, categoryName FROM categories;";
             var conn = new MySqlConnection(dao.ConnStr);
@@ -112,49 +108,81 @@ namespace OfficeSuppliesManagement
             var da = new MySqlDataAdapter(cmd);
             var dt = new DataTable();
             da.Fill(dt);
-            categoryListBox.DataSource = dt;
-            categoryListBox.DisplayMember = "categoryName";
-            categoryListBox.ValueMember = "categoryId";
 
-            lblCategoryDescIdNum.Text = categoryListBox.SelectedValue.ToString();
+            // Populate the ComboBox.
+            cbCategoryId.DataSource = dt;
+            cbCategoryId.DisplayMember = "categoryName";
+            cbCategoryId.ValueMember = "categoryId";
+
+            // Clear TextBoxes before populating the ProductId TextBox.
+            clearTxts();
+
+            updateProductId();
         }
 
-        private void AddProductForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void cbCategoryId_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.Visible = false;
-            OfficeSuppliesManagement optionsForm = new OfficeSuppliesManagement();
-            optionsForm.ShowDialog();
+            if (cbCategoryId.SelectedIndex >= 0)
+            {
+                var dao = new DAO();
+                string sql = "SELECT description FROM categories WHERE categoryId=@categoryId";
+                var conn = new MySqlConnection(dao.ConnStr);
+                var cmd = new MySqlCommand(sql, conn);
+
+                conn.Open();
+                cmd.Parameters.AddWithValue("@categoryId", cbCategoryId.SelectedValue.ToString());
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    lblCategoryDescText.Text = reader[0].ToString();
+                }
+                conn.Close();
+
+                if (lblCategoryDescText.Text == "")
+                {
+                    lblCategoryDescText.Text = "*";
+                }
+            }
         }
 
-        private void btnBackAddProduct_Click(object sender, EventArgs e)
+        private void updateProductId()
         {
-            this.Close();
-            OfficeSuppliesManagement mainForm = new OfficeSuppliesManagement();
-            mainForm.Show();
-        }
-
-        private void categoryListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            lblCategoryDescIdNum.Text = categoryListBox.SelectedValue.ToString();
-        }
-
-        private void categoryListBox_DoubleClick(object sender, EventArgs e)
-        {
+            // Get the ID number of the last product in the table, then add one 
+            // to simulate what the ID of the product that the user is about to 
+            // add will be.
             var dao = new DAO();
-            string sql = $"SELECT description FROM categories WHERE categoryId = {categoryListBox.SelectedValue}";
+            string sql = "SELECT MAX(productId) FROM products";
             var conn = new MySqlConnection(dao.ConnStr);
             var cmd = new MySqlCommand(sql, conn);
-
+            cmd = new MySqlCommand(sql, conn);
             conn.Open();
-            string? description = cmd.ExecuteScalar().ToString();
+            int.TryParse(cmd.ExecuteScalar().ToString(), out int maxId);
             conn.Close();
+            txtProductId.Text = (maxId + 1).ToString();
+        }
 
-            if (description == "")
-            {
-                description = "(No Description Provided)";
-            }
+        private void clearTxts()
+        {
+            // Clear all of the TextBoxes.
+            txtProductId.Clear();
+            txtName.Clear();
+            txtDescription.Clear();
+            txtPrice.Clear();
+            txtQuantity.Clear();
+            cbCategoryId.SelectedIndex = -1;
 
-            MessageBox.Show(description, "Description", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // Hide the success label again.
+            lblSuccessMessage.Visible = false;
+
+            // Update the simulated new product ID after everything has 
+            // been reset.
+            updateProductId();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            clearTxts();
+            lblCategoryDescText.Text = "*";
         }
     }
 }

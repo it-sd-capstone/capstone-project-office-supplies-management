@@ -28,76 +28,137 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnAdd = new Button();
-            label1 = new Label();
-            btnDisplay = new Button();
-            btnUpdate = new Button();
+            pnlOptions = new Panel();
+            pnlDisplay = new Panel();
+            lblDisplay = new Label();
+            pnlUpdate = new Panel();
+            lblUpdate = new Label();
+            pnlAdd = new Panel();
+            lblAdd = new Label();
+            pnlContent = new Panel();
+            pnlOptions.SuspendLayout();
+            pnlDisplay.SuspendLayout();
+            pnlUpdate.SuspendLayout();
+            pnlAdd.SuspendLayout();
             SuspendLayout();
             // 
-            // btnAdd
+            // pnlOptions
             // 
-            btnAdd.Location = new Point(15, 271);
-            btnAdd.Margin = new Padding(6);
-            btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(250, 200);
-            btnAdd.TabIndex = 0;
-            btnAdd.Text = "Add New Product";
-            btnAdd.UseVisualStyleBackColor = true;
-            btnAdd.Click += btnAdd_Click;
+            pnlOptions.BackColor = Color.SeaGreen;
+            pnlOptions.Controls.Add(pnlDisplay);
+            pnlOptions.Controls.Add(pnlUpdate);
+            pnlOptions.Controls.Add(pnlAdd);
+            pnlOptions.Dock = DockStyle.Top;
+            pnlOptions.Location = new Point(0, 0);
+            pnlOptions.Name = "pnlOptions";
+            pnlOptions.Size = new Size(1692, 103);
+            pnlOptions.TabIndex = 4;
             // 
-            // label1
+            // pnlDisplay
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 13.875F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(279, 85);
-            label1.Name = "label1";
-            label1.Size = new Size(537, 50);
-            label1.TabIndex = 1;
-            label1.Text = "Supplies Management Options:";
+            pnlDisplay.Controls.Add(lblDisplay);
+            pnlDisplay.Location = new Point(419, 3);
+            pnlDisplay.Name = "pnlDisplay";
+            pnlDisplay.Size = new Size(202, 97);
+            pnlDisplay.TabIndex = 2;
+            pnlDisplay.Click += pnlDisplay_Click;
             // 
-            // btnDisplay
+            // lblDisplay
             // 
-            btnDisplay.Location = new Point(861, 271);
-            btnDisplay.Margin = new Padding(6);
-            btnDisplay.Name = "btnDisplay";
-            btnDisplay.Size = new Size(250, 200);
-            btnDisplay.TabIndex = 2;
-            btnDisplay.Text = "Display Product/Supplier Information";
-            btnDisplay.UseVisualStyleBackColor = true;
-            btnDisplay.Click += btnDisplay_Click;
+            lblDisplay.AutoSize = true;
+            lblDisplay.BackColor = Color.Transparent;
+            lblDisplay.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lblDisplay.ForeColor = Color.Black;
+            lblDisplay.Location = new Point(40, 28);
+            lblDisplay.Name = "lblDisplay";
+            lblDisplay.Size = new Size(130, 45);
+            lblDisplay.TabIndex = 1;
+            lblDisplay.Text = "Display";
+            lblDisplay.Click += lblDisplay_Click;
             // 
-            // btnUpdate
+            // pnlUpdate
             // 
-            btnUpdate.Location = new Point(427, 271);
-            btnUpdate.Margin = new Padding(6);
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(250, 200);
-            btnUpdate.TabIndex = 3;
-            btnUpdate.Text = "Update Existing Product";
-            btnUpdate.UseVisualStyleBackColor = true;
-            btnUpdate.Click += btnUpdate_Click;
+            pnlUpdate.Controls.Add(lblUpdate);
+            pnlUpdate.Location = new Point(211, 3);
+            pnlUpdate.Name = "pnlUpdate";
+            pnlUpdate.Size = new Size(202, 97);
+            pnlUpdate.TabIndex = 1;
+            pnlUpdate.Click += pnlUpdate_Click;
+            // 
+            // lblUpdate
+            // 
+            lblUpdate.AutoSize = true;
+            lblUpdate.BackColor = Color.Transparent;
+            lblUpdate.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lblUpdate.ForeColor = Color.Black;
+            lblUpdate.Location = new Point(36, 28);
+            lblUpdate.Name = "lblUpdate";
+            lblUpdate.Size = new Size(129, 45);
+            lblUpdate.TabIndex = 1;
+            lblUpdate.Text = "Update";
+            lblUpdate.Click += lblUpdate_Click;
+            // 
+            // pnlAdd
+            // 
+            pnlAdd.Controls.Add(lblAdd);
+            pnlAdd.Location = new Point(3, 3);
+            pnlAdd.Name = "pnlAdd";
+            pnlAdd.Size = new Size(202, 97);
+            pnlAdd.TabIndex = 0;
+            pnlAdd.Click += pnlAdd_Click;
+            // 
+            // lblAdd
+            // 
+            lblAdd.AutoSize = true;
+            lblAdd.BackColor = Color.Transparent;
+            lblAdd.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lblAdd.ForeColor = Color.Black;
+            lblAdd.Location = new Point(53, 28);
+            lblAdd.Name = "lblAdd";
+            lblAdd.Size = new Size(83, 45);
+            lblAdd.TabIndex = 0;
+            lblAdd.Text = "Add";
+            lblAdd.Click += lblAdd_Click;
+            // 
+            // pnlContent
+            // 
+            pnlContent.BackColor = Color.DarkGray;
+            pnlContent.Dock = DockStyle.Fill;
+            pnlContent.Location = new Point(0, 103);
+            pnlContent.Name = "pnlContent";
+            pnlContent.Size = new Size(1692, 1083);
+            pnlContent.TabIndex = 5;
             // 
             // OfficeSuppliesManagement
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1126, 660);
-            Controls.Add(btnUpdate);
-            Controls.Add(btnDisplay);
-            Controls.Add(label1);
-            Controls.Add(btnAdd);
+            BackColor = Color.IndianRed;
+            ClientSize = new Size(1692, 1186);
+            Controls.Add(pnlContent);
+            Controls.Add(pnlOptions);
             Margin = new Padding(6);
             Name = "OfficeSuppliesManagement";
             Text = "Office Supplies Management";
+            pnlOptions.ResumeLayout(false);
+            pnlDisplay.ResumeLayout(false);
+            pnlDisplay.PerformLayout();
+            pnlUpdate.ResumeLayout(false);
+            pnlUpdate.PerformLayout();
+            pnlAdd.ResumeLayout(false);
+            pnlAdd.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Button btnAdd;
-        private Label label1;
-        private Button btnDisplay;
-        private Button btnUpdate;
+        private Panel pnlOptions;
+        private Panel pnlContent;
+        private Panel pnlDisplay;
+        private Panel pnlUpdate;
+        private Panel pnlAdd;
+        private Label lblAdd;
+        private Label lblDisplay;
+        private Label lblUpdate;
     }
 }
