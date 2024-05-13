@@ -19,6 +19,22 @@ namespace OfficeSuppliesManagement
         public DisplayProductForm()
         {
             InitializeComponent();
+            InitializeDataGridView();
+        }
+        private void InitializeDataGridView()
+        {
+           
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.MultiSelect = true;
+            dgv.CellMouseClick += new DataGridViewCellMouseEventHandler(dgv_CellMouseClick);
+        }
+        private void dgv_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (ModifierKeys.HasFlag(Keys.Shift) && e.RowIndex >= 0)
+            {
+               
+                dgv.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Yellow;
+            }
         }
 
         private void btnDisplayProductSupplier_Click(object sender, EventArgs e)
