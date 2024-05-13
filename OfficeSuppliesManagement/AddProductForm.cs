@@ -79,8 +79,6 @@ namespace OfficeSuppliesManagement
 
                         //clear the text boxes
                         clearTxts();
-
-                        conn.Close();
                     }
 
                     // Show success message in the label instead of a message box
@@ -177,12 +175,13 @@ namespace OfficeSuppliesManagement
             // Update the simulated new product ID after everything has 
             // been reset.
             updateProductId();
+
+            lblCategoryDescText.Text = "*";
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             clearTxts();
-            lblCategoryDescText.Text = "*";
         }
     }
 }

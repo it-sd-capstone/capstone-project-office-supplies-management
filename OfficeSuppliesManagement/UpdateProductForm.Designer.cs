@@ -210,6 +210,7 @@
             cbCategoryId.Name = "cbCategoryId";
             cbCategoryId.Size = new Size(546, 40);
             cbCategoryId.TabIndex = 22;
+            cbCategoryId.SelectedIndexChanged += cbCategoryId_SelectedIndexChanged;
             // 
             // btnClear
             // 
