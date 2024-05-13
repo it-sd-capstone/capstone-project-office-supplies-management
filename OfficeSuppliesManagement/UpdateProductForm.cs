@@ -99,6 +99,9 @@ namespace OfficeSuppliesManagement
                         //clear the text boxes
                         clearTxts();
                     }
+
+                    // Show success message in the label instead of a message box
+                    lblSuccessMessage.Visible = true;
                 }
             }
             catch (Exception ex)
@@ -130,9 +133,11 @@ namespace OfficeSuppliesManagement
             cbCategoryId.DataSource = dt;
             cbCategoryId.DisplayMember = "categoryName";
             cbCategoryId.ValueMember = "categoryId";
+
+            clearTxts();
         }
 
-        private void categoryListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbCategoryId_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbCategoryId.SelectedIndex >= 0)
             {
@@ -199,7 +204,7 @@ namespace OfficeSuppliesManagement
                         txtDescription.Text = reader[1].ToString();
                         txtPrice.Text = reader[2].ToString();
                         txtQuantity.Text = reader[3].ToString();
-                        cbCategoryId.SelectedIndex = catId;
+                        cbCategoryId.SelectedIndex = catId - 1;  // Subtract one for 0-based indexing
                     }
 
                     txtName.Enabled = true;
@@ -246,12 +251,13 @@ namespace OfficeSuppliesManagement
 
             // Hide the success label again.
             lblSuccessMessage.Visible = false;
+
+            lblCategoryDescText.Text = "*";
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
             clearTxts();
-            lblCategoryDescText.Text = "*";
         }
     }
 }

@@ -33,6 +33,8 @@
             dgv = new DataGridView();
             btnViewAllProducts = new Button();
             btnDisplayProductSupplier = new Button();
+            lblPrintProdDesc = new Label();
+            lblAlterationWarning = new Label();
             ((System.ComponentModel.ISupportInitialize)dgv).BeginInit();
             SuspendLayout();
             // 
@@ -61,7 +63,7 @@
             dgv.Margin = new Padding(6);
             dgv.Name = "dgv";
             dgv.RowHeadersWidth = 82;
-            dgv.Size = new Size(1662, 857);
+            dgv.Size = new Size(1662, 216);
             dgv.TabIndex = 4;
             // 
             // btnViewAllProducts
@@ -84,6 +86,26 @@
             btnDisplayProductSupplier.TabIndex = 22;
             btnDisplayProductSupplier.Text = "Display Info";
             btnDisplayProductSupplier.UseVisualStyleBackColor = true;
+            btnDisplayProductSupplier.Click += btnDisplayProductSupplier_Click;
+            // 
+            // lblPrintProdDesc
+            // 
+            lblPrintProdDesc.AutoSize = true;
+            lblPrintProdDesc.Location = new Point(756, 1021);
+            lblPrintProdDesc.Name = "lblPrintProdDesc";
+            lblPrintProdDesc.Size = new Size(665, 32);
+            lblPrintProdDesc.TabIndex = 23;
+            lblPrintProdDesc.Text = "Print all products to a PDF file on this computer's Desktop ->";
+            // 
+            // lblAlterationWarning
+            // 
+            lblAlterationWarning.AutoSize = true;
+            lblAlterationWarning.ForeColor = Color.Red;
+            lblAlterationWarning.Location = new Point(15, 372);
+            lblAlterationWarning.Name = "lblAlterationWarning";
+            lblAlterationWarning.Size = new Size(1599, 32);
+            lblAlterationWarning.TabIndex = 24;
+            lblAlterationWarning.Text = "*Note: No data will be lost/changed if any changes are made here.  Click on the \"Add\" or \"Update\" buttons to go to a form that will allow alterations.";
             // 
             // DisplayProductForm
             // 
@@ -91,6 +113,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1692, 1083);
             ControlBox = false;
+            Controls.Add(lblAlterationWarning);
+            Controls.Add(lblPrintProdDesc);
             Controls.Add(btnDisplayProductSupplier);
             Controls.Add(btnViewAllProducts);
             Controls.Add(dgv);
@@ -112,5 +136,7 @@
         private DataGridView dgv;
         private Button btnViewAllProducts;
         public Button btnDisplayProductSupplier;
+        private Label lblPrintProdDesc;
+        private Label lblAlterationWarning;
     }
 }
