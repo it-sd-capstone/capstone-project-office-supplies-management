@@ -80,7 +80,6 @@ namespace OfficeSuppliesManagementTest
             _form.txtDescription.Text = "This is a test product.";
             _form.txtPrice.Text = "10.99";
             _form.txtQuantity.Text = "100";
-            _form.txtCategoryId.Text = "1";
             _form.btnAddNewProduct.PerformClick();
 
             // Assert
@@ -201,6 +200,30 @@ namespace OfficeSuppliesManagementTest
                 restock.ExpRestock = DateTime.Now;
 
             }
+
+            [TestFixture]
+            public class SupplierTests
+            {
+                [Test]
+                public void TestSupplierProperties()
+                {
+                    // Arrange
+                    var supplier = new Supplier
+                    {
+                        SupplierID = 1,
+                        SupplierName = "Test Supplier",
+                        PhoneNumber = "123-456-7890",
+                        Email = "test@supplier.com",
+                        Address = "123 Test St",
+                        City = "Test City",
+                        Region = "Test Region",
+                        Country = "Test Country",
+                        PostalCode = "12345",
+                        SalesRepName = "Test SalesRep"
+                    };
+                }
+            }
         }
     }
 }
+
