@@ -28,83 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnDisplayProductSupplier = new Button();
             lblProductId = new Label();
             txtProductId = new TextBox();
-            btnBackDisplayProduct = new Button();
             dgv = new DataGridView();
             btnViewAllProducts = new Button();
+            btnDisplayProductSupplier = new Button();
             ((System.ComponentModel.ISupportInitialize)dgv).BeginInit();
             SuspendLayout();
-            // 
-            // btnDisplayProductSupplier
-            // 
-            btnDisplayProductSupplier.Location = new Point(585, 6);
-            btnDisplayProductSupplier.Name = "btnDisplayProductSupplier";
-            btnDisplayProductSupplier.Size = new Size(175, 31);
-            btnDisplayProductSupplier.TabIndex = 0;
-            btnDisplayProductSupplier.Text = "Display Product Information";
-            btnDisplayProductSupplier.UseVisualStyleBackColor = true;
-            btnDisplayProductSupplier.Click += btnDisplayProductSupplier_Click;
             // 
             // lblProductId
             // 
             lblProductId.AutoSize = true;
-            lblProductId.Location = new Point(12, 9);
+            lblProductId.Location = new Point(22, 55);
+            lblProductId.Margin = new Padding(6, 0, 6, 0);
             lblProductId.Name = "lblProductId";
-            lblProductId.Size = new Size(66, 15);
+            lblProductId.Size = new Size(131, 32);
             lblProductId.TabIndex = 1;
             lblProductId.Text = "Product ID:";
             // 
             // txtProductId
             // 
-            txtProductId.Location = new Point(84, 6);
+            txtProductId.Location = new Point(178, 53);
+            txtProductId.Margin = new Padding(6);
             txtProductId.Name = "txtProductId";
-            txtProductId.Size = new Size(274, 23);
+            txtProductId.Size = new Size(201, 39);
             txtProductId.TabIndex = 2;
-            // 
-            // btnBackDisplayProduct
-            // 
-            btnBackDisplayProduct.Location = new Point(84, 380);
-            btnBackDisplayProduct.Name = "btnBackDisplayProduct";
-            btnBackDisplayProduct.Size = new Size(175, 43);
-            btnBackDisplayProduct.TabIndex = 3;
-            btnBackDisplayProduct.Text = "Back";
-            btnBackDisplayProduct.UseVisualStyleBackColor = true;
-            btnBackDisplayProduct.Click += btnBackDisplayProduct_Click;
             // 
             // dgv
             // 
             dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv.Location = new Point(84, 64);
+            dgv.Location = new Point(15, 137);
+            dgv.Margin = new Padding(6);
             dgv.Name = "dgv";
-            dgv.Size = new Size(676, 294);
+            dgv.RowHeadersWidth = 82;
+            dgv.Size = new Size(1662, 857);
             dgv.TabIndex = 4;
             // 
             // btnViewAllProducts
             // 
-            btnViewAllProducts.Location = new Point(585, 380);
+            btnViewAllProducts.Location = new Point(1430, 1006);
+            btnViewAllProducts.Margin = new Padding(6);
             btnViewAllProducts.Name = "btnViewAllProducts";
-            btnViewAllProducts.Size = new Size(175, 43);
+            btnViewAllProducts.Size = new Size(247, 62);
             btnViewAllProducts.TabIndex = 5;
             btnViewAllProducts.Text = "Products to PDF";
             btnViewAllProducts.UseVisualStyleBackColor = true;
             btnViewAllProducts.Click += btnViewAllProducts_Click;
             // 
+            // btnDisplayProductSupplier
+            // 
+            btnDisplayProductSupplier.Location = new Point(477, 40);
+            btnDisplayProductSupplier.Margin = new Padding(6);
+            btnDisplayProductSupplier.Name = "btnDisplayProductSupplier";
+            btnDisplayProductSupplier.Size = new Size(247, 62);
+            btnDisplayProductSupplier.TabIndex = 22;
+            btnDisplayProductSupplier.Text = "Display Info";
+            btnDisplayProductSupplier.UseVisualStyleBackColor = true;
+            // 
             // DisplayProductForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1692, 1083);
+            ControlBox = false;
+            Controls.Add(btnDisplayProductSupplier);
             Controls.Add(btnViewAllProducts);
             Controls.Add(dgv);
-            Controls.Add(btnBackDisplayProduct);
             Controls.Add(txtProductId);
             Controls.Add(lblProductId);
-            Controls.Add(btnDisplayProductSupplier);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(6);
             Name = "DisplayProductForm";
             Text = "Display Product";
-            FormClosed += DisplayProductForm_FormClosed;
             Load += DisplayProductForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgv).EndInit();
             ResumeLayout(false);
@@ -112,12 +107,10 @@
         }
 
         #endregion
-
-        private Button btnDisplayProductSupplier;
         private Label lblProductId;
         private TextBox txtProductId;
-        private Button btnBackDisplayProduct;
         private DataGridView dgv;
         private Button btnViewAllProducts;
+        public Button btnDisplayProductSupplier;
     }
 }
