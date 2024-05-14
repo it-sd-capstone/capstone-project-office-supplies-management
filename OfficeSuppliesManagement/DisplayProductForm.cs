@@ -20,6 +20,10 @@ namespace OfficeSuppliesManagement
         {
             InitializeComponent();
             InitializeDataGridView();
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(OfficeSuppliesManagement.HandleFormKeyboardShortcuts);
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+            this.StartPosition = FormStartPosition.Manual;
         }
         private void InitializeDataGridView()
         {

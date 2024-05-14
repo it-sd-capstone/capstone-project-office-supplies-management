@@ -26,6 +26,11 @@ namespace OfficeSuppliesManagement
         {
             InitializeComponent();
             lblCategoryDescText.MaximumSize = new Size(cbCategoryId.Width, 0);
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(OfficeSuppliesManagement.HandleFormKeyboardShortcuts);
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+            this.StartPosition = FormStartPosition.Manual;
+
         }
 
 

@@ -6,9 +6,12 @@ namespace OfficeSuppliesManagement
         public OfficeSuppliesManagement()
         {
             InitializeComponent();
+            OfficeSuppliesManagement.mainForm = this;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(OfficeSuppliesManagement.HandleFormKeyboardShortcuts);
         }
 
         private void pnlAdd_Click(object sender, EventArgs e)
@@ -100,5 +103,79 @@ namespace OfficeSuppliesManagement
         {
             pnlDisplay_Click(sender, e);
         }
+
+        // Below code is for the keyboard shortcuts
+        // AB 5/13/2024
+        public static DisplayProductForm displayForm = null;
+        public static AddProductForm addForm = null;
+        public static UpdateProductForm updateForm = null;
+        public static OfficeSuppliesManagement mainForm = null;
+        public static void HandleFormKeyboardShortcuts(object sender, KeyEventArgs e)
+        {
+            Form currentForm = sender as Form; 
+
+           
+            void CloseFormIfNotMain(Form formToClose)
+            {
+                if (formToClose != mainForm)
+                {
+                    formToClose.Close();
+                }
+            }
+
+            if (e.Control && e.KeyCode == Keys.D)
+            {
+                if (displayForm == null || displayForm.IsDisposed)
+                {
+                    displayForm = new DisplayProductForm();
+                    displayForm.Show();
+                    CloseFormIfNotMain(currentForm);
+                }
+                else
+                {
+                    displayForm.Focus();
+                }
+            }
+            else if (e.Control && e.KeyCode == Keys.A)
+            {
+                if (addForm == null || addForm.IsDisposed)
+                {
+                    addForm = new AddProductForm();
+                    addForm.Show();
+                    CloseFormIfNotMain(currentForm);
+                }
+                else
+                {
+                    addForm.Focus();
+                }
+            }
+            else if (e.Control && e.KeyCode == Keys.U)
+            {
+                if (updateForm == null || updateForm.IsDisposed)
+                {
+                    updateForm = new UpdateProductForm();
+                    updateForm.Show();
+                    CloseFormIfNotMain(currentForm);
+                }
+                else
+                {
+                    updateForm.Focus();
+                }
+            }
+            else if (e.Control && e.KeyCode == Keys.O)
+            {
+                if (mainForm == null || mainForm.IsDisposed)
+                {
+                    mainForm = new OfficeSuppliesManagement();
+                    mainForm.Show();
+                }
+                else
+                {
+                    mainForm.Focus();
+                }
+            }
+        }
+
     }
+
 }
