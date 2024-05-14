@@ -36,10 +36,12 @@
             pnlAdd = new Panel();
             lblAdd = new Label();
             pnlContent = new Panel();
+            label1 = new Label();
             pnlOptions.SuspendLayout();
             pnlDisplay.SuspendLayout();
             pnlUpdate.SuspendLayout();
             pnlAdd.SuspendLayout();
+            pnlContent.SuspendLayout();
             SuspendLayout();
             // 
             // pnlOptions
@@ -50,16 +52,18 @@
             pnlOptions.Controls.Add(pnlAdd);
             pnlOptions.Dock = DockStyle.Top;
             pnlOptions.Location = new Point(0, 0);
+            pnlOptions.Margin = new Padding(2, 1, 2, 1);
             pnlOptions.Name = "pnlOptions";
-            pnlOptions.Size = new Size(1692, 103);
+            pnlOptions.Size = new Size(911, 48);
             pnlOptions.TabIndex = 4;
             // 
             // pnlDisplay
             // 
             pnlDisplay.Controls.Add(lblDisplay);
-            pnlDisplay.Location = new Point(419, 3);
+            pnlDisplay.Location = new Point(226, 1);
+            pnlDisplay.Margin = new Padding(2, 1, 2, 1);
             pnlDisplay.Name = "pnlDisplay";
-            pnlDisplay.Size = new Size(202, 97);
+            pnlDisplay.Size = new Size(109, 45);
             pnlDisplay.TabIndex = 2;
             pnlDisplay.Click += pnlDisplay_Click;
             // 
@@ -69,9 +73,10 @@
             lblDisplay.BackColor = Color.Transparent;
             lblDisplay.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             lblDisplay.ForeColor = Color.Black;
-            lblDisplay.Location = new Point(40, 28);
+            lblDisplay.Location = new Point(22, 13);
+            lblDisplay.Margin = new Padding(2, 0, 2, 0);
             lblDisplay.Name = "lblDisplay";
-            lblDisplay.Size = new Size(130, 45);
+            lblDisplay.Size = new Size(67, 21);
             lblDisplay.TabIndex = 1;
             lblDisplay.Text = "Display";
             lblDisplay.Click += lblDisplay_Click;
@@ -79,9 +84,10 @@
             // pnlUpdate
             // 
             pnlUpdate.Controls.Add(lblUpdate);
-            pnlUpdate.Location = new Point(211, 3);
+            pnlUpdate.Location = new Point(114, 1);
+            pnlUpdate.Margin = new Padding(2, 1, 2, 1);
             pnlUpdate.Name = "pnlUpdate";
-            pnlUpdate.Size = new Size(202, 97);
+            pnlUpdate.Size = new Size(109, 45);
             pnlUpdate.TabIndex = 1;
             pnlUpdate.Click += pnlUpdate_Click;
             // 
@@ -91,9 +97,10 @@
             lblUpdate.BackColor = Color.Transparent;
             lblUpdate.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             lblUpdate.ForeColor = Color.Black;
-            lblUpdate.Location = new Point(36, 28);
+            lblUpdate.Location = new Point(19, 13);
+            lblUpdate.Margin = new Padding(2, 0, 2, 0);
             lblUpdate.Name = "lblUpdate";
-            lblUpdate.Size = new Size(129, 45);
+            lblUpdate.Size = new Size(66, 21);
             lblUpdate.TabIndex = 1;
             lblUpdate.Text = "Update";
             lblUpdate.Click += lblUpdate_Click;
@@ -101,9 +108,10 @@
             // pnlAdd
             // 
             pnlAdd.Controls.Add(lblAdd);
-            pnlAdd.Location = new Point(3, 3);
+            pnlAdd.Location = new Point(2, 1);
+            pnlAdd.Margin = new Padding(2, 1, 2, 1);
             pnlAdd.Name = "pnlAdd";
-            pnlAdd.Size = new Size(202, 97);
+            pnlAdd.Size = new Size(109, 45);
             pnlAdd.TabIndex = 0;
             pnlAdd.Click += pnlAdd_Click;
             // 
@@ -113,9 +121,10 @@
             lblAdd.BackColor = Color.Transparent;
             lblAdd.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             lblAdd.ForeColor = Color.Black;
-            lblAdd.Location = new Point(53, 28);
+            lblAdd.Location = new Point(29, 13);
+            lblAdd.Margin = new Padding(2, 0, 2, 0);
             lblAdd.Name = "lblAdd";
-            lblAdd.Size = new Size(83, 45);
+            lblAdd.Size = new Size(41, 21);
             lblAdd.TabIndex = 0;
             lblAdd.Text = "Add";
             lblAdd.Click += lblAdd_Click;
@@ -123,21 +132,31 @@
             // pnlContent
             // 
             pnlContent.BackColor = Color.DarkGray;
+            pnlContent.Controls.Add(label1);
             pnlContent.Dock = DockStyle.Fill;
-            pnlContent.Location = new Point(0, 103);
+            pnlContent.Location = new Point(0, 48);
+            pnlContent.Margin = new Padding(2, 1, 2, 1);
             pnlContent.Name = "pnlContent";
-            pnlContent.Size = new Size(1692, 1083);
+            pnlContent.Size = new Size(911, 508);
             pnlContent.TabIndex = 5;
+            // 
+            // label1
+            // 
+            label1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(12, 372);
+            label1.Name = "label1";
+            label1.Size = new Size(303, 127);
+            label1.TabIndex = 0;
+            label1.Text = "Keyboard shortcuts:\r\n\r\nPress Ctrl + D for Display Product Form.\r\nPress Ctrl + A for Add Product Form.\r\nPress Ctrl + U for Update Product Form.\r\nPress Ctrl + O for Office Supplies Main Form";
             // 
             // OfficeSuppliesManagement
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.IndianRed;
-            ClientSize = new Size(1692, 1186);
+            ClientSize = new Size(911, 556);
             Controls.Add(pnlContent);
             Controls.Add(pnlOptions);
-            Margin = new Padding(6);
             Name = "OfficeSuppliesManagement";
             Text = "Office Supplies Management";
             pnlOptions.ResumeLayout(false);
@@ -147,6 +166,7 @@
             pnlUpdate.PerformLayout();
             pnlAdd.ResumeLayout(false);
             pnlAdd.PerformLayout();
+            pnlContent.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -160,5 +180,6 @@
         private Label lblAdd;
         private Label lblDisplay;
         private Label lblUpdate;
+        private Label label1;
     }
 }

@@ -19,6 +19,26 @@ namespace OfficeSuppliesManagement
         public DisplayProductForm()
         {
             InitializeComponent();
+            InitializeDataGridView();
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(OfficeSuppliesManagement.HandleFormKeyboardShortcuts);
+            this.StartPosition = FormStartPosition.Manual;
+           
+        }
+        private void InitializeDataGridView()
+        {
+
+            dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgv.MultiSelect = true;
+            dgv.CellMouseClick += new DataGridViewCellMouseEventHandler(dgv_CellMouseClick);
+        }
+        private void dgv_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (ModifierKeys.HasFlag(Keys.Shift) && e.RowIndex >= 0)
+            {
+
+                dgv.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Yellow;
+            }
         }
 
         private void btnDisplayProductSupplier_Click(object sender, EventArgs e)
@@ -85,7 +105,7 @@ namespace OfficeSuppliesManagement
             PdfPTable table = new PdfPTable(dt.Columns.Count);
             table.WidthPercentage = 100;
 
-            
+
             foreach (DataColumn column in dt.Columns)
             {
                 PdfPCell cell = new PdfPCell(new Phrase(column.ColumnName));
@@ -93,7 +113,7 @@ namespace OfficeSuppliesManagement
                 table.AddCell(cell);
             }
 
-            
+
             foreach (DataRow row in dt.Rows)
             {
                 foreach (Object item in row.ItemArray)
@@ -108,5 +128,46 @@ namespace OfficeSuppliesManagement
             MessageBox.Show("PDF created on your desktop.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void btnDisplayAll_Click(object sender, EventArgs e)
+        {
+            DAO dao = new DAO();
+            try
+            {
+                using (var conn = new MySqlConnection(dao.ConnStr))
+                {
+                    string query = "SELECT productID, name, description, price, quantity, categoryId, SupplierID FROM products";
+                    using (var cmd = new MySqlCommand(query, conn))
+                    {
+                        DataTable dt = new DataTable();
+                        conn.Open();
+                        using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                        {
+                            da.Fill(dt);
+                        }
+                        if (dt.Rows.Count > 0)
+                        {
+                            dgv.DataSource = dt;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No products found.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    conn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void xButton1_Click(object sender, EventArgs e)
+        {
+            Application.OpenForms.OfType<Form>().Except(new Form[] { this, OfficeSuppliesManagement.mainForm }).ToList().ForEach(f => f.Close());
+            this.Close();
+            OfficeSuppliesManagement.mainForm.Show();
+
+        }
     }
 }

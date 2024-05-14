@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lblProductId = new Label();
             txtProductId = new TextBox();
             dgv = new DataGridView();
@@ -35,43 +36,43 @@
             btnDisplayProductSupplier = new Button();
             lblPrintProdDesc = new Label();
             lblAlterationWarning = new Label();
+            btnDisplayAll = new Button();
+            buttonToolTip1 = new ToolTip(components);
+            xButton1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgv).BeginInit();
             SuspendLayout();
             // 
             // lblProductId
             // 
             lblProductId.AutoSize = true;
-            lblProductId.Location = new Point(22, 55);
-            lblProductId.Margin = new Padding(6, 0, 6, 0);
+            lblProductId.Location = new Point(12, 22);
             lblProductId.Name = "lblProductId";
-            lblProductId.Size = new Size(131, 32);
+            lblProductId.Size = new Size(66, 15);
             lblProductId.TabIndex = 1;
             lblProductId.Text = "Product ID:";
             // 
             // txtProductId
             // 
-            txtProductId.Location = new Point(178, 53);
-            txtProductId.Margin = new Padding(6);
+            txtProductId.Location = new Point(97, 19);
             txtProductId.Name = "txtProductId";
-            txtProductId.Size = new Size(201, 39);
+            txtProductId.Size = new Size(110, 23);
             txtProductId.TabIndex = 2;
             // 
             // dgv
             // 
             dgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgv.Location = new Point(15, 137);
-            dgv.Margin = new Padding(6);
+            dgv.Location = new Point(11, 89);
             dgv.Name = "dgv";
             dgv.RowHeadersWidth = 82;
-            dgv.Size = new Size(1662, 216);
+            dgv.ShowCellToolTips = false;
+            dgv.Size = new Size(895, 273);
             dgv.TabIndex = 4;
             // 
             // btnViewAllProducts
             // 
-            btnViewAllProducts.Location = new Point(1430, 1006);
-            btnViewAllProducts.Margin = new Padding(6);
+            btnViewAllProducts.Location = new Point(770, 472);
             btnViewAllProducts.Name = "btnViewAllProducts";
-            btnViewAllProducts.Size = new Size(247, 62);
+            btnViewAllProducts.Size = new Size(133, 29);
             btnViewAllProducts.TabIndex = 5;
             btnViewAllProducts.Text = "Products to PDF";
             btnViewAllProducts.UseVisualStyleBackColor = true;
@@ -79,21 +80,22 @@
             // 
             // btnDisplayProductSupplier
             // 
-            btnDisplayProductSupplier.Location = new Point(477, 40);
-            btnDisplayProductSupplier.Margin = new Padding(6);
+            btnDisplayProductSupplier.Location = new Point(226, 15);
             btnDisplayProductSupplier.Name = "btnDisplayProductSupplier";
-            btnDisplayProductSupplier.Size = new Size(247, 62);
+            btnDisplayProductSupplier.Size = new Size(133, 29);
             btnDisplayProductSupplier.TabIndex = 22;
             btnDisplayProductSupplier.Text = "Display Info";
+            buttonToolTip1.SetToolTip(btnDisplayProductSupplier, "Hold Shift and click to highlight rows below.");
             btnDisplayProductSupplier.UseVisualStyleBackColor = true;
             btnDisplayProductSupplier.Click += btnDisplayProductSupplier_Click;
             // 
             // lblPrintProdDesc
             // 
             lblPrintProdDesc.AutoSize = true;
-            lblPrintProdDesc.Location = new Point(756, 1021);
+            lblPrintProdDesc.Location = new Point(407, 479);
+            lblPrintProdDesc.Margin = new Padding(2, 0, 2, 0);
             lblPrintProdDesc.Name = "lblPrintProdDesc";
-            lblPrintProdDesc.Size = new Size(665, 32);
+            lblPrintProdDesc.Size = new Size(327, 15);
             lblPrintProdDesc.TabIndex = 23;
             lblPrintProdDesc.Text = "Print all products to a PDF file on this computer's Desktop ->";
             // 
@@ -101,18 +103,49 @@
             // 
             lblAlterationWarning.AutoSize = true;
             lblAlterationWarning.ForeColor = Color.Red;
-            lblAlterationWarning.Location = new Point(15, 372);
+            lblAlterationWarning.Location = new Point(12, 365);
+            lblAlterationWarning.Margin = new Padding(2, 0, 2, 0);
             lblAlterationWarning.Name = "lblAlterationWarning";
-            lblAlterationWarning.Size = new Size(1599, 32);
+            lblAlterationWarning.Size = new Size(789, 15);
             lblAlterationWarning.TabIndex = 24;
             lblAlterationWarning.Text = "*Note: No data will be lost/changed if any changes are made here.  Click on the \"Add\" or \"Update\" buttons to go to a form that will allow alterations.";
             // 
+            // btnDisplayAll
+            // 
+            btnDisplayAll.Location = new Point(226, 54);
+            btnDisplayAll.Name = "btnDisplayAll";
+            btnDisplayAll.Size = new Size(133, 29);
+            btnDisplayAll.TabIndex = 25;
+            btnDisplayAll.Text = "Display All Products";
+            buttonToolTip1.SetToolTip(btnDisplayAll, "Hold Shift and click to highlight rows below.");
+            btnDisplayAll.UseVisualStyleBackColor = true;
+            btnDisplayAll.Click += btnDisplayAll_Click;
+            // 
+            // buttonToolTip1
+            // 
+            buttonToolTip1.AutoPopDelay = 50000;
+            buttonToolTip1.InitialDelay = 500;
+            buttonToolTip1.ReshowDelay = 100;
+            // 
+            // xButton1
+            // 
+            xButton1.ForeColor = SystemColors.ActiveCaptionText;
+            xButton1.Location = new Point(12, 472);
+            xButton1.Name = "xButton1";
+            xButton1.Size = new Size(129, 29);
+            xButton1.TabIndex = 26;
+            xButton1.Text = "Home";
+            xButton1.UseVisualStyleBackColor = true;
+            xButton1.Click += xButton1_Click;
+            // 
             // DisplayProductForm
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1692, 1083);
+            ClientSize = new Size(911, 508);
             ControlBox = false;
+            Controls.Add(xButton1);
+            Controls.Add(btnDisplayAll);
             Controls.Add(lblAlterationWarning);
             Controls.Add(lblPrintProdDesc);
             Controls.Add(btnDisplayProductSupplier);
@@ -121,7 +154,6 @@
             Controls.Add(txtProductId);
             Controls.Add(lblProductId);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(6);
             Name = "DisplayProductForm";
             Text = "Display Product";
             Load += DisplayProductForm_Load;
@@ -138,5 +170,8 @@
         public Button btnDisplayProductSupplier;
         private Label lblPrintProdDesc;
         private Label lblAlterationWarning;
+        public Button btnDisplayAll;
+        private ToolTip buttonToolTip1;
+        private Button xButton1;
     }
 }
