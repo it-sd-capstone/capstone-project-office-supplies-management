@@ -267,6 +267,7 @@ namespace OfficeSuppliesManagement
 
         private void xButton2_Click(object sender, EventArgs e)
         {
+            Application.OpenForms.OfType<Form>().Except(new Form[] { this, OfficeSuppliesManagement.mainForm }).ToList().ForEach(f => f.Close());
             this.Close();
             OfficeSuppliesManagement.mainForm.Show();
         }
