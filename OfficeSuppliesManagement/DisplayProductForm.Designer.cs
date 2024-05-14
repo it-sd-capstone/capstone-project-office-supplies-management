@@ -130,7 +130,7 @@
             // xButton1
             // 
             xButton1.ForeColor = SystemColors.ActiveCaptionText;
-            xButton1.Location = new Point(11, 479);
+            xButton1.Location = new Point(12, 472);
             xButton1.Name = "xButton1";
             xButton1.Size = new Size(129, 29);
             xButton1.TabIndex = 26;

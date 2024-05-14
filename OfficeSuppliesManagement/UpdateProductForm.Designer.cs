@@ -211,7 +211,7 @@
             // xButton2
             // 
             xButton2.ForeColor = SystemColors.ActiveCaptionText;
-            xButton2.Location = new Point(263, 467);
+            xButton2.Location = new Point(257, 472);
             xButton2.Name = "xButton2";
             xButton2.Size = new Size(129, 29);
             xButton2.TabIndex = 27;
