@@ -38,6 +38,7 @@
             lblAlterationWarning = new Label();
             btnDisplayAll = new Button();
             buttonToolTip1 = new ToolTip(components);
+            xButton1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgv).BeginInit();
             SuspendLayout();
             // 
@@ -126,12 +127,24 @@
             buttonToolTip1.InitialDelay = 500;
             buttonToolTip1.ReshowDelay = 100;
             // 
+            // xButton1
+            // 
+            xButton1.ForeColor = SystemColors.ActiveCaptionText;
+            xButton1.Location = new Point(11, 479);
+            xButton1.Name = "xButton1";
+            xButton1.Size = new Size(129, 29);
+            xButton1.TabIndex = 26;
+            xButton1.Text = "Home";
+            xButton1.UseVisualStyleBackColor = true;
+            xButton1.Click += xButton1_Click;
+            // 
             // DisplayProductForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(911, 508);
             ControlBox = false;
+            Controls.Add(xButton1);
             Controls.Add(btnDisplayAll);
             Controls.Add(lblAlterationWarning);
             Controls.Add(lblPrintProdDesc);
@@ -159,5 +172,6 @@
         private Label lblAlterationWarning;
         public Button btnDisplayAll;
         private ToolTip buttonToolTip1;
+        private Button xButton1;
     }
 }

@@ -28,8 +28,9 @@ namespace OfficeSuppliesManagement
             lblCategoryDescText.MaximumSize = new Size(cbCategoryId.Width, 0);
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(OfficeSuppliesManagement.HandleFormKeyboardShortcuts);
-            this.FormBorderStyle = FormBorderStyle.Sizable;
             this.StartPosition = FormStartPosition.Manual;
+            
+
 
         }
 
@@ -187,6 +188,12 @@ namespace OfficeSuppliesManagement
         private void btnClear_Click(object sender, EventArgs e)
         {
             clearTxts();
+        }
+
+        private void xButton3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            OfficeSuppliesManagement.mainForm.Show();
         }
     }
 }

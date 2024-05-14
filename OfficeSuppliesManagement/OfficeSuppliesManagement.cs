@@ -12,6 +12,7 @@ namespace OfficeSuppliesManagement
             this.StartPosition = FormStartPosition.CenterScreen;
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(OfficeSuppliesManagement.HandleFormKeyboardShortcuts);
+           
         }
 
         private void pnlAdd_Click(object sender, EventArgs e)

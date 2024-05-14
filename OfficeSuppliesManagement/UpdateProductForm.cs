@@ -22,8 +22,8 @@ namespace OfficeSuppliesManagement
             lblCategoryDescText.MaximumSize = new Size(700, 0);
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(OfficeSuppliesManagement.HandleFormKeyboardShortcuts);
-            this.FormBorderStyle = FormBorderStyle.Sizable;
             this.StartPosition = FormStartPosition.Manual;
+         
         }
 
         //Adding for tests
@@ -188,7 +188,8 @@ namespace OfficeSuppliesManagement
             if (checkRows.HasRows)
             {
                 // Setup database connection and query string.
-                try {
+                try
+                {
                     dao = new DAO();
                     string sql = $"SELECT name, description, price, quantity, categoryId FROM products WHERE productId=@productId";
                     conn = new MySqlConnection(dao.ConnStr);
@@ -262,6 +263,12 @@ namespace OfficeSuppliesManagement
         private void btnClear_Click(object sender, EventArgs e)
         {
             clearTxts();
+        }
+
+        private void xButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            OfficeSuppliesManagement.mainForm.Show();
         }
     }
 }

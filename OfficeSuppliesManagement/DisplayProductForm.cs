@@ -22,12 +22,12 @@ namespace OfficeSuppliesManagement
             InitializeDataGridView();
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(OfficeSuppliesManagement.HandleFormKeyboardShortcuts);
-            this.FormBorderStyle = FormBorderStyle.Sizable;
             this.StartPosition = FormStartPosition.Manual;
+           
         }
         private void InitializeDataGridView()
         {
-           
+
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.MultiSelect = true;
             dgv.CellMouseClick += new DataGridViewCellMouseEventHandler(dgv_CellMouseClick);
@@ -36,7 +36,7 @@ namespace OfficeSuppliesManagement
         {
             if (ModifierKeys.HasFlag(Keys.Shift) && e.RowIndex >= 0)
             {
-               
+
                 dgv.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Yellow;
             }
         }
@@ -160,6 +160,13 @@ namespace OfficeSuppliesManagement
             {
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void xButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            OfficeSuppliesManagement.mainForm.Show();
+
         }
     }
 }
