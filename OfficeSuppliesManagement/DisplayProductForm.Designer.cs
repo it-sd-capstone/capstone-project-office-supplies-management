@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lblProductId = new Label();
             txtProductId = new TextBox();
             dgv = new DataGridView();
@@ -36,6 +37,7 @@
             lblPrintProdDesc = new Label();
             lblAlterationWarning = new Label();
             btnDisplayAll = new Button();
+            buttonToolTip1 = new ToolTip(components);
             ((System.ComponentModel.ISupportInitialize)dgv).BeginInit();
             SuspendLayout();
             // 
@@ -61,6 +63,7 @@
             dgv.Location = new Point(11, 89);
             dgv.Name = "dgv";
             dgv.RowHeadersWidth = 82;
+            dgv.ShowCellToolTips = false;
             dgv.Size = new Size(895, 273);
             dgv.TabIndex = 4;
             // 
@@ -81,6 +84,7 @@
             btnDisplayProductSupplier.Size = new Size(133, 29);
             btnDisplayProductSupplier.TabIndex = 22;
             btnDisplayProductSupplier.Text = "Display Info";
+            buttonToolTip1.SetToolTip(btnDisplayProductSupplier, "Hold Shift and click to highlight rows below.");
             btnDisplayProductSupplier.UseVisualStyleBackColor = true;
             btnDisplayProductSupplier.Click += btnDisplayProductSupplier_Click;
             // 
@@ -112,8 +116,15 @@
             btnDisplayAll.Size = new Size(133, 29);
             btnDisplayAll.TabIndex = 25;
             btnDisplayAll.Text = "Display All Products";
+            buttonToolTip1.SetToolTip(btnDisplayAll, "Hold Shift and click to highlight rows below.");
             btnDisplayAll.UseVisualStyleBackColor = true;
             btnDisplayAll.Click += btnDisplayAll_Click;
+            // 
+            // buttonToolTip1
+            // 
+            buttonToolTip1.AutoPopDelay = 50000;
+            buttonToolTip1.InitialDelay = 500;
+            buttonToolTip1.ReshowDelay = 100;
             // 
             // DisplayProductForm
             // 
@@ -147,5 +158,6 @@
         private Label lblPrintProdDesc;
         private Label lblAlterationWarning;
         public Button btnDisplayAll;
+        private ToolTip buttonToolTip1;
     }
 }
