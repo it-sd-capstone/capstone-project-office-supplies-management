@@ -1,5 +1,9 @@
 # Capstone Project: Office Supplies Management
 
+Have you wanted a quick and easy way to store office supplies for your business either the products you are selling physically or inventory that you need for a business such as paper, pens, or folders? Well then look no farther as this is the program for you. In this product you have an easy to use interface with the ability to add new products, as well as updating and displaying existing products in the database. You will have your office supplies stored in an easy to use program in no time. 
+
+How to use the product: https://cvtc.instructuremedia.com/embed/75904d47-843e-4d11-9035-771be71c85b9
+
 ### Before cloning/forking...
 1.  Download [MySQL](https://dev.mysql.com/downloads/mysql/)
 
